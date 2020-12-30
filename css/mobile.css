@@ -1,0 +1,46 @@
+@media (max-width: 880px) {
+  #content {
+    width: 82%;
+  }
+
+  #avatar {
+    display: none;
+  }
+
+  #intro {
+    width: 100%;
+  }
+
+  #content .time {
+    width: 100%;
+    display: block;
+    text-align: left;
+    padding: 0;
+  }
+
+  #content .time span {
+    display: inline-block;;
+  }
+
+  #content .time + p {
+    padding-top: 0;
+  }
+
+  #content .col-50 {
+    width:100%;
+  }
+
+  #content .col-25 {
+    width:100%;
+  }
+
+  #fusion_map {
+    width:100%;
+  }
+
+  #doc {
+    width:100%;
+    height:auto;
+  }
+}
+
