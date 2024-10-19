@@ -8,7 +8,8 @@ BEGIN:VEVENT
 UID:{{ .name | urlize }}@fusion-dancing.eu
 SUMMARY:{{ replace .name "," "\\," }}
 DTSTART;VALUE=DATE:{{ .start | dateFormat "20060102" }}
-DTEND;VALUE=DATE:{{ .end | dateFormat "20060102" }}
+{{ $end := .end | time.AsTime -}}
+DTEND;VALUE=DATE:{{ $end.AddDate 0 0 1 | dateFormat "20060102" }}
 LOCATION:{{ replace .location "," "\\," }}
 URL:{{ .link }}
 DESCRIPTION:Join us at {{ replace .name "," "\\," }} in {{ replace .location "," "\\," }}! More info: {{ .link }}
