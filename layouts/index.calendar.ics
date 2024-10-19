@@ -6,12 +6,12 @@ METHOD:PUBLISH
 {{ range .Site.Data.events.events }}
 BEGIN:VEVENT
 UID:{{ .name | urlize }}@fusion-dancing.eu
-SUMMARY:{{ .name }}
+SUMMARY:{{ replace .name "," "\\," }}
 DTSTART;VALUE=DATE:{{ .start | dateFormat "20060102" }}
 DTEND;VALUE=DATE:{{ .end | dateFormat "20060102" }}
-LOCATION:{{ .location }}
+LOCATION:{{ replace .location "," "\\," }}
 URL:{{ .link }}
-DESCRIPTION:Join us at {{ .name }} in {{ .location }}! More info: {{ .link }}
+DESCRIPTION:Join us at {{ replace .name "," "\\," }} in {{ replace .location "," "\\," }}! More info: {{ .link }}
 END:VEVENT
 {{ end }}
 END:VCALENDAR
