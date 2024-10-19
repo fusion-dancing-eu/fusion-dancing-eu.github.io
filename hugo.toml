@@ -2,10 +2,5 @@ baseURL = 'https://fusion-dancing.eu/'
 languageCode = 'en-us'
 title = 'Fusion Dancing in Europe'
 
-[outputFormats.ics]
-  mediaType = "text/calendar"
-  baseName = "events"
-  isPlainText = true
-
 [outputs]
-  home = ["HTML", "ics"]
+  home = ["HTML", "calendar"]
