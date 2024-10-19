@@ -1,0 +1,29 @@
+<table class="table fusion-calendar">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Location</th>
+            <th>Event</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range .Site.Data.events.events }}
+        <tr>
+            <td>
+                {{ $startDate := .start | time.Format "02" }}
+                {{ $startMonth := .start | time.Format "Jan" }}
+                {{ $endDate := .end | time.Format "02" }}
+                {{ $endMonth := .end | time.Format "Jan" }}
+
+                {{ if eq $startMonth $endMonth }}
+                {{ $startDate }}-{{ $endDate }} {{ $startMonth }}
+                {{ else }}
+                {{ $startDate }} {{ $startMonth }} - {{ $endDate }} {{ $endMonth }}
+                {{ end }}
+            </td>
+            <td>{{ .location }}</td>
+            <td><a href="{{ .link }}" target="_blank">{{ .name }}</a></td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
