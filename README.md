@@ -14,6 +14,8 @@ Please make sure to consistently indent the lines with spaces.
 * `link`: Event website with more details, e.g. "https://awesome-town-fusion-weekend.nl"
 * `added`: The date of the day this event was added (or last updated) in the format `YYYY-MM-DD` to differentiate newly added events in the RSS feed, e.g. "2024-12-31"
 
+When logged in on GitHub.com, you can [add events here](https://github.com/fusion-dancing-eu/fusion-dancing-eu.github.io/edit/main/data/events.yaml), click on "Commit changes..." selecting "Create a new branch for this commit and start a pull request" to save your changes and have them reviewed before publication.
+
 ## Building locally
 
 Requires hugo 0.136.2, which allows you to run
