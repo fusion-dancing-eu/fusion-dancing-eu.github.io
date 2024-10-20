@@ -29,6 +29,12 @@ events:
     location: Bristol, UK
     link: https://www.kaleidoscopefusion.com/news/kaleidoscope-xxl-2025-fusion-weekender
     added: 2024-10-20
+  - name: Toulouse Fusion Week-End 2025
+    start: 2025-04-30
+    end: 2025-05-04
+    location: Toulouse, France
+    link: https://www.toulousefusion.fr/fusionweek-end
+    added: 2024-10-20
   - name: Fusionauts' Quest
     start: 2025-05-16
     end: 2025-05-18
