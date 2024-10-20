@@ -18,7 +18,7 @@ When logged in on GitHub.com, you can [add events here](https://github.com/fusio
 
 ## Building locally
 
-Requires hugo 0.136.2, which allows you to run
+Requires [Hugo](https://gohugo.io) (tested with version 0.136.2), which allows you to run
 
 ```
 hugo server
