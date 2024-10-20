@@ -7,6 +7,13 @@ Contact events(at)fusion-dancing.eu or open an issue or pull request here to add
 Events can be added to `data/events.yaml` following the format of the existing events.
 Please make sure to consistently indent the lines with spaces.
 
+* `name`: Title of the event, e.g. "Awesome-Town Fusion Weekend"
+* `start`: Day the event starts in the format `YYYY-MM-DD`, e.g. "2020-01-31"
+* `end`: Last day of the event in the format `YYYY-MM-DD`, e.g. "2020-01-31"
+* `location`: City and country the event takes place in, e.g. "Bern, Switzerland"
+* `link`: Event website with more details, e.g. "https://awesome-town-fusion-weekend.nl"
+* `added`: The date of the day this event was added (or last updated) in the format `YYYY-MM-DD` to differentiate newly added events in the RSS feed, e.g. "2024-12-31"
+
 ## Building locally
 
 Requires hugo 0.136.2, which allows you to run

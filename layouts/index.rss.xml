@@ -1,0 +1,24 @@
+<rss version="2.0">
+<channel>
+
+    <title>Fusion Dancing Events Europe</title>
+    <description>Weekend workshops, exchanges, and other dance events from the Fusion community in Europe.</description>
+    <link>https://fusion-dancing.eu/</link>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
+    <managingEditor>events@fusion-dancing.eu</managingEditor>
+
+    {{ range .Site.Data.events.events }}
+    <item>
+        <title>{{ .name }}</title>
+        <link>{{ .link }}</link>
+        <pubDate>{{ .added | dateFormat "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+        <guid>{{ .link }}#{{ .start | dateFormat "20060102" }}</guid>
+        <description>
+            Join us at {{ .name }} in {{ .location }} from {{ .start | dateFormat "2006-01-02" }} to {{ .end | dateFormat "2006-01-02" }}!
+            More info: {{ .link }}
+        </description>
+    </item>
+    {{ end }}
+
+</channel>
+</rss>

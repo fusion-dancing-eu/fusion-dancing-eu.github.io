@@ -4,28 +4,34 @@ events:
     end: 2025-01-05
     location: Bern, Switzerland
     link: https://www.fusionizers.com/
+    added: 2024-10-20
   - name: Playground Utrecht Fusion
     start: 2025-02-14
     end: 2025-02-16
     location: Utrecht, The Netherlands
     link: https://playgroundfusion.nl/
+    added: 2024-10-20
   - name: Cocoa Blues & Fusion Exchange
     start: 2025-03-13
     end: 2025-03-16
     location: Barcelona, Spain
     link: https://www.cocoablux.com
+    added: 2024-10-20
   - name: Camp Kaleidoscope
     start: 2025-03-16
     end: 2025-03-21
     location: Bristol area, UK
     link: https://www.kaleidoscopefusion.com/news/camp-kaleidoscope-2025-fusion-residential
+    added: 2024-10-20
   - name: Kaleidoscope XXL
     start: 2025-03-21
     end: 2025-03-23
     location: Bristol, UK
     link: https://www.kaleidoscopefusion.com/news/kaleidoscope-xxl-2025-fusion-weekender
+    added: 2024-10-20
   - name: Fusionauts' Quest
     start: 2025-05-16
     end: 2025-05-18
     location: Berlin, Germany
     link: https://fusionautsquest.de/
+    added: 2024-10-20
