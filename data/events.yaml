@@ -1,4 +1,16 @@
 events:
+  - name: Fusion Teacher Training week one
+    start: 2025-05-11
+    end: 2025-05-15
+    location: Berlin, Germany
+    link: https://www.fusionautsquest.de/teacher-training
+    added: 2024-11-13
+  - name: Fusion Teacher Training week two
+    start: 2025-05-20
+    end: 2025-05-24
+    location: Berlin, Germany
+    link: https://www.fusionautsquest.de/teacher-training
+    added: 2024-11-13
   - name: New Year's Eve a La Fresca - Flow Fusion Dance BCN
     start: 2024-12-30
     end: 2025-01-01
