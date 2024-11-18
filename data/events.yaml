@@ -1,4 +1,10 @@
 events:
+  - name: Spring Fusion retreat
+    start: 2025-06-06
+    end: 2025-06-09
+    location: Toulouse area, France
+    link: https://facebook.com/events/s/retraite-fusion-de-printemps-r/1241635767106284/
+    added: 2024-11-18
   - name: Fusion Teacher Training week one
     start: 2025-05-11
     end: 2025-05-15
