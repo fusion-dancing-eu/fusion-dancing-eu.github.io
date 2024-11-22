@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        {{ range .Site.Data.events.events }}
+        {{ range sort .Site.Data.events.events "start" }}
         <tr>
             <td>
                 {{ $startDate := .start | time.Format "02" }}
