@@ -7,7 +7,8 @@
     <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
     <managingEditor>events@fusion-dancing.eu</managingEditor>
 
-    {{ range .Site.Data.events.events }}
+    {{ range $year, $events := .Site.Data.events }}
+    {{ range $events }}
     <item>
         <title>{{ .name }}</title>
         <link>{{ .link }}</link>
@@ -18,6 +19,7 @@
             More info: {{ .link }}
         </description>
     </item>
+    {{ end }}
     {{ end }}
 
 </channel>
