@@ -14,6 +14,7 @@ DTEND;VALUE=DATE:{{ $end.AddDate 0 0 1 | dateFormat "20060102" }}
 LOCATION:{{ replace .location "," "\\," }}
 URL:{{ .link }}
 DESCRIPTION:Join us at {{ replace .name "," "\\," }} in {{ replace .location "," "\\," }}! More info: {{ .link }}
+DTSTAMP:{{ .added | time.Format "20060102T150405Z" }}
 END:VEVENT
 {{ end }}
 {{ end }}
