@@ -1,3 +1,6 @@
+{{ range $year, $events := .Site.Data.events }}
+{{ if ge (int $year) now.Year }}
+<h3>Events {{ $year }}</h3>
 <table class="table fusion-calendar">
     <thead>
         <tr>
@@ -7,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        {{ range sort .Site.Data.events.events "start" }}
+        {{ range sort $events "start" }}
         <tr>
             <td>
                 {{ $startDate := .start | time.Format "02" }}
@@ -27,3 +30,5 @@
         {{ end }}
     </tbody>
 </table>
+{{ end }}
+{{ end }}
