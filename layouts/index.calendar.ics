@@ -3,7 +3,8 @@ VERSION:2.0
 PRODID:-//fusion-dancing-eu//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-{{ range .Site.Data.events.events }}
+{{ range $year, $events := .Site.Data.events }}
+{{ range $events }}
 BEGIN:VEVENT
 UID:{{ .name | urlize }}@fusion-dancing.eu
 SUMMARY:{{ replace .name "," "\\," }}
@@ -14,5 +15,6 @@ LOCATION:{{ replace .location "," "\\," }}
 URL:{{ .link }}
 DESCRIPTION:Join us at {{ replace .name "," "\\," }} in {{ replace .location "," "\\," }}! More info: {{ .link }}
 END:VEVENT
+{{ end }}
 {{ end }}
 END:VCALENDAR
