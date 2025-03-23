@@ -27,5 +27,4 @@ hugo server
 ## TODO
 
 - [ ] add support for `cancelled: true` in `events.yaml` to render the events with strike through (css class already exists, rss template doesn't know how to handle this yet)
-- [ ] automatically create one table per year, in case there are events for the next year already
 - [ ] add translations of the main text and a language switcher
