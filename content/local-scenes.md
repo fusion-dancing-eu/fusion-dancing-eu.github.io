@@ -33,6 +33,8 @@ The Sheet link needs to be a read only link that is accessible without login. It
 
 See the [Google Sheet for the Darmstadt socials](https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/edit?usp=sharing) as an example.
 
+Don't like Google? Sounds fair. You can instead provide a public link to any CSV file that follows the schema above.
+
 ## Updating events
 
 You can add and update events in your Google Sheet as you please.
