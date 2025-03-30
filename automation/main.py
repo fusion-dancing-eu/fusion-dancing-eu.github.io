@@ -1,4 +1,5 @@
 from pathlib import Path
+import sys
 import pandas as pd
 import yaml
 from io import StringIO
@@ -39,12 +40,19 @@ def main(sheet_csv_url: str, output_yaml_file_path: Path):
 
 
 if __name__ == "__main__":
+    errors = False
     for name, url in {
         "darmstadt": "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Darmstadt",
         "frankfurt": "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Frankfurt",
         "heidelberg": "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Heidelberg",
     }.items():
-        main(
-            sheet_csv_url=url,
-            output_yaml_file_path=HERE.parent / "data" / f"{name}.yaml",
-        )
+        try:
+            main(
+                sheet_csv_url=url,
+                output_yaml_file_path=HERE.parent / "data" / f"{name}.yaml",
+            )
+        except Exception as e:
+            print(f"Error for ${name}:", e)
+            errors = True
+    if errors:
+        sys.exit(1)
