@@ -4,7 +4,7 @@ title: "Fusion Dancing Heidelberg"
 
 # Heidelberg
 
-The Frankfurt Fusion scene is growing, join one of our events below.
+The Heidelberg Fusion scene is growing, join one of our events below.
 
 To get in contact with organisers and other local Fusion dancers, join our [Signal group](https://signal.group/#CjQKIAzPq-Zo-6g-tLBmM63-TA5FQdA8jwTIN6XtOsE4eupqEhDygggHsA_PYqSZZ37xjX5E).
 
