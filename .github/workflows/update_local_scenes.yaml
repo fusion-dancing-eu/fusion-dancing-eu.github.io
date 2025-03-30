@@ -1,0 +1,44 @@
+name: Update local scene events
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Update events
+        run: |
+          pip install uv
+          cd automation
+          uv venv
+          uv run python main.py
+
+      - name: Check for changes in data/
+        id: check_changes
+        run: |
+          git diff --exit-code data/
+        continue-on-error: true
+
+      - name: Commit and push changes if any
+        if: steps.check_changes.outcome == 'failure'
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add data/
+          git commit -m "Automated commit: Update local scene events"
+          git push origin main
