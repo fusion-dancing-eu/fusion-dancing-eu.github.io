@@ -31,6 +31,8 @@ The Sheet link needs to be a read only link that is accessible without login. It
     - Optional link to an event page
     - Example: https://awesome-fusion-social.berlin
 
+See the [Google Sheet for the Darmstadt socials](https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/edit?usp=sharing) as an example.
+
 ## Updating events
 
 You can add and update events in your Google Sheet as you please.
