@@ -1,6 +1,10 @@
 baseURL = 'https://fusion-dancing.eu/'
-languageCode = 'en-us'
+languageCode = 'en'
 title = 'Fusion Dancing in Europe'
+contentDir = "content"
 
 [outputs]
   home = ["HTML", "RSS", "calendar"]
+
+[security]
+  enableInlineShortcodes = true

@@ -1,0 +1,48 @@
+{{- $events := index .Site.Data (.Get "dataKey") -}}
+{{- $yesterday := now.AddDate 0 0 -1 -}}
+{{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
+<h3>Events</h3>
+{{ if $upcomingEvents }}
+<table class="table fusion-calendar">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{- range sort $upcomingEvents "start" -}}
+        <tr>
+            <td>
+                {{- if .link -}}
+                <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+                {{- else -}}
+                {{ .title }}
+                {{- end -}}
+            </td>
+            <td>
+                {{- $startTime := .start | time.Format "15:04" -}}
+                {{- $startDate := .start | time.Format "02" -}}
+                {{- $startMonth := .start | time.Format "January" -}}
+                {{- $startYear := .start | time.Format "2006" -}}
+                {{- $endTime := .end | time.Format "15:04" -}}
+                {{- $endDate := .end | time.Format "02" -}}
+                {{- $endMonth := .end | time.Format "January" -}}
+                {{- $endYear := .end | time.Format "2006" -}}
+
+                {{- if and (eq $startDate $endDate) (eq $startMonth $endMonth) -}}
+                {{ $startTime }} - {{ $endTime }} {{ $startDate }} {{ $startMonth }} {{ $startYear }}
+                {{- else -}}
+                {{ $startTime }} {{ $startDate }} {{ $startMonth }} - {{ $endTime }} {{ $endDate }} {{ $endMonth }} {{
+                $startYear }}
+                {{- end -}}
+            </td>
+            <td>{{ .location }}</td>
+        </tr>
+        {{- end -}}
+    </tbody>
+</table>
+{{- else -}}
+There are currently no upcoming events available.
+{{- end -}}
