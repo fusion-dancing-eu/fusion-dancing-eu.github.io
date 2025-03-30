@@ -5,6 +5,7 @@ contentDir = "content"
 
 [outputs]
   home = ["HTML", "RSS", "calendar"]
+  section = ["HTML", "RSS", "calendar"]
 
 [security]
   enableInlineShortcodes = true

@@ -1,0 +1,28 @@
+{{- $section := .Section }}
+{{- $data := index .Site.Data $section }}
+<rss version="2.0">
+<channel>
+
+    <title>Fusion Dancing Events {{ $section | title }}</title>
+    <description>Socials and other Fusion events in {{ $section | title }}.</description>
+    <link>https://fusion-dancing.eu/{{ $section }}</link>
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</lastBuildDate>
+    <managingEditor>events@fusion-dancing.eu</managingEditor>
+
+    {{- range $event := $data }}
+    <item>
+        <title>{{ .title }}</title>
+        <link>{{ .link }}</link>
+        <pubDate>{{ .added | dateFormat "Mon, 02 Jan 2006 15:04:05 MST" }}</pubDate>
+        <guid>{{ .link }}#{{ .start | dateFormat "20060102" }}</guid>
+        <description>
+            Join us for {{ .title }} in {{ .location }} from {{ .start | dateFormat "2006-01-02 15:04" }} to {{ .end | dateFormat "2006-01-02 15:04" }}!
+            {{- if .link -}}
+            More info: {{ .link }}
+            {{- end }}
+        </description>
+    </item>
+    {{ end }}
+
+</channel>
+</rss>

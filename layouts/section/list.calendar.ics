@@ -1,0 +1,24 @@
+{{- $section := .Section }}
+{{- $data := index .Site.Data $section }}
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//fusion-dancing-eu/{{ $section }}//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{- range $event := $data }}
+BEGIN:VEVENT
+UID:{{ .title | urlize }}@fusion-dancing.eu
+SUMMARY:{{ replace .title "," "\\," }}
+DTSTART;VALUE=DATE:{{ .start | dateFormat "20060102T150405Z" }}
+{{- $end := .end | time.AsTime }}
+DTEND;VALUE=DATE:{{ $end.AddDate 0 0 1 | dateFormat "20060102T150405Z" }}
+LOCATION:{{ replace .location "," "\\," }}
+URL:{{ .link }}
+DESCRIPTION:Join us at {{ replace .title "," "\\," }}, {{ replace .location "," "\\," }}! 
+{{- if .link -}}
+More info: {{ .link }}
+{{- end }}
+DTSTAMP:{{ .added | time.Format "20060102T150405Z" }}
+END:VEVENT
+{{- end }}
+END:VCALENDAR
