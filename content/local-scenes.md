@@ -24,12 +24,13 @@ The Sheet link needs to be a read only link that is accessible without login. It
     - Where is the glory happening?
     - Example: Awesome Pub, 5th Avenue
 - Added
-    - Date when you added the event (relevant for future RSS reader integration)
+    - Date when you added the event (relevant for RSS feed generation)
     - Format: `YYYY-MM-DD`
     - Example: `2025-03-30`
 - Link
     - Optional link to an event page
     - Example: https://awesome-fusion-social.berlin
+
 
 See the [Google Sheet for the Darmstadt socials](https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/edit?usp=sharing) as an example.
 
