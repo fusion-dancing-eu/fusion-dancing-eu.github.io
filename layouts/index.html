@@ -41,8 +41,7 @@
                     internet archive</a>.
                 You can find most Fusion dancing events in Europe in the calendar below.<br>
                 There is also <a href="http://fusioncal.com" target="_blank">fusioncal.com</a> that features Fusion
-                events
-                world wide.
+                events world wide.
             </p>
             <h2>Documentary</h2>
             <iframe id="doc" src="https://player.vimeo.com/video/393174510?title=0" width="640" height="338"
@@ -70,6 +69,12 @@
             </p>
 
             <h2>Fusion Calendar Europe</h2>
+            <p>
+                The following calendar contains dance events from across Europe that last for multiple days
+                and dedicate at least roughly half their resources to Fusion dancing.
+                For social dances and other smaller or shorter events, make sure to check out the individual pages
+                and calendars of the local Fusion scenes via the map or list below.
+            </p>
             {{- $icsRelUrl := "index.ics" }}
             {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
             <p>
@@ -94,7 +99,7 @@
             </p>
 
             <p>
-                In case you prefer a list instead of the map above:
+                In case you prefer a list of the local fusion scenes instead of the map above:
                 <ul id="scenes">
                     {{- range sort $scenes "name" -}}
                     {{- if .url }}
