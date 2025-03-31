@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.145.0
+    outputs:
+      time_check_passed: ${{ steps.commit_info.outputs.time_check_passed }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,9 +49,11 @@ jobs:
           if [ "$time_diff" -le 300 ]; then
             echo "Commit is less than 5 minutes old."
             echo "time_check_passed=true" >> $GITHUB_ENV
+            echo "time_check_passed=true" >> $GITHUB_OUTPUT
           else
             echo "Commit is older than 5 minutes."
             echo "time_check_passed=false" >> $GITHUB_ENV
+            echo "time_check_passed=false" >> $GITHUB_OUTPUT
           fi
       - name: Install Hugo CLI
         if: env.time_check_passed == 'true'
@@ -89,6 +93,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    if: needs.build.outputs.time_check_passed == 'true' 
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
