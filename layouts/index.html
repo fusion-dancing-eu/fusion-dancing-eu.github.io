@@ -57,8 +57,7 @@
             </p>
             <p>
                 All dances are original interpretations of the music you are hearing at each and every moment.
-            </p>
-            <p>
+                <br>
                 Music:
                 Slow Love (<a href="https://moglebaum.bandcamp.com/" target="_blank">Moglebaum</a>),
                 Aus dem Off (<a href="http://g.co/kgs/gJDSZP" target="_blank">AINIE</a>),
@@ -71,25 +70,47 @@
             </p>
 
             <h2>Fusion Calendar Europe</h2>
+            {{- $icsRelUrl := "index.ics" }}
+            {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
             <p>
-                This calendar is available as an iCalendar (ics) to subscribe to with your favourite calendar client:
-                <a href="https://fusion-dancing.eu/index.ics">https://fusion-dancing.eu/index.ics</a>
-            </p>
-            <p>
-                Or you can subscribe to the RSS feed of newly added events:
-                <a href="https://fusion-dancing.eu/index.xml">https://fusion-dancing.eu/index.xml</a>
+                Subscribe to these events with your favourite calendar app via
+                <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
+                or <a href="{{ $webCalUrl }}">WebCal</a>.
+                Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
+                newly added events.
             </p>
 
             {{ partial "events.html" . }}
 
+            {{- $scenes := index .Site.Data "scenes" }}
             <h2>Local Scenes</h2>
             <p>
                 The following cities have or had local Fusion scenes, click on a marker to find out whether a scene is
-                actively hosting at least monthly events:
+                actively hosting at least monthly events.
                 <br>
                 <center>
                     <div id="fusion_map"></div>
                 </center>
+            </p>
+
+            <p>
+                In case you prefer a list instead of the map above:
+                <ul id="scenes">
+                    {{- range sort $scenes "name" -}}
+                    {{- if .url }}
+                    <a href="{{ .url }}">
+                    {{- end }}
+                        <li>
+                            {{ .name }}
+                            {{- if ne .status "active" }}
+                            ({{ .status }})
+                            {{- end }}
+                        </li>
+                    {{- if .url }}
+                    </a>
+                    {{- end }}
+                    {{- end}}
+                </ul>
             </p>
 
             <p>
@@ -104,7 +125,6 @@
                 or send an email to events[at]fusion-dancing.eu
             </p>
 
-
             <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
                 integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
                 crossorigin=""></script>
@@ -118,257 +138,19 @@
                 }).addTo(mymap);
                 var markers = [];
                 var coordinates = [
-                    {
-                        'name': 'Amsterdam',
-                        'coords': [52.3706, 4.8965],
-                        'url': 'https://www.facebook.com/pg/MokumFusion/events/',
-                        'status': 'inactive'
-                    },
-                    {
-                        'name': 'Bristol',
-                        'coords': [51.4510, -2.5887],
-                        'url': 'https://www.facebook.com/KaleidoscopeFusion',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Frankfurt am Main',
-                        'coords': [50.1109, 8.6821],
-                        'url': '/frankfurt',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'København',
-                        'coords': [55.676098, 12.568337],
-                        'url': 'https://www.facebook.com/FirecrackerFusion',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Praha',
-                        'coords': [50.0755, 14.4378],
-                        'url': 'https://www.facebook.com/profile.php?id=61574513392508',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Toulouse',
-                        'coords': [43.6018, 1.4426],
-                        'url': 'https://dansefusiontoulouse.blogspot.com/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Paris',
-                        'coords': [48.8559, 2.3476],
-                        'url': 'https://www.facebook.com/pg/Neolonga-Paris-2018739845077794/events/',
-                        'status': 'inactive'
-                    },
-                    {
-                        'name': 'Hamburg',
-                        'coords': [53.5468, 9.9989],
-                        'url': 'https://www.facebook.com/pg/blueinfusion/events/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Utrecht',
-                        'coords': [52.0907, 5.1214],
-                        'url': 'https://www.facebook.com/groups/623912826128934/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Bern',
-                        'coords': [46.9482, 7.4522],
-                        'url': 'https://www.facebook.com/pg/FusionDanceBern/events/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Heidelberg',
-                        'coords': [49.3988, 8.6724],
-                        'url': '/heidelberg',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Barcelona',
-                        'coords': [41.3825, 2.1801],
-                        'url': 'https://www.facebook.com/pg/Flow-Fusion-Dance-Bcn-1940012126265245/events/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Berlin',
-                        'coords': [52.5129, 13.3855],
-                        'url': 'https://www.facebook.com/groups/807969330569377',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Leipzig',
-                        'coords': [51.340199, 12.360103],
-                        'url': 'https://t.me/+n5i4a5Sc8DZkMDZi',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Darmstadt',
-                        'coords': [49.8728, 8.6512],
-                        'url': '/darmstadt',
-                        'status': 'inactive'
-                    },
-                    {
-                        'name': 'Stuttgart',
-                        'coords': [48.7758, 9.1829],
-                        'url': '#',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Stockholm',
-                        'coords': [59.3227, 18.0656],
-                        'url': 'https://swedishswing.se/kalender/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Arnhem',
-                        'coords': [51.9828, 5.9093],
-                        'url': 'https://www.facebook.com/fusiondancenights/',
-                        'status': 'inactive'
-                    },
-                    {
-                        'name': 'Osnabrück',
-                        'coords': [52.2640, 8.0461],
-                        'url': 'https://www.facebook.com/groups/748942311961158/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Sheffield',
-                        'coords': [53.3792, -1.4715],
-                        'url': '#',
-                        'status': 'unknown'
-                    },
-                    {
-                        'name': 'Newcastle',
-                        'coords': [54.9741, -1.6119],
-                        'url': 'http://www.hoodooblues.dance',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'London',
-                        'coords': [51.5072, 0.1276],
-                        'url': 'https://www.facebook.com/groups/1541117946247264',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Zürich',
-                        'coords': [47.3728, 8.5405],
-                        'url': 'https://bluesli.ch/fuse-the-blues/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Strasbourg',
-                        'coords': [48.5734, 7.7521],
-                        'url': 'https://linktr.ee/fuseyourroots',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Lille',
-                        'coords': [50.6363, 3.0640],
-                        'url': 'https://www.facebook.com/LilleBluesion/events',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Brussels',
-                        'coords': [50.8467, 4.3517],
-                        'url': 'https://www.facebook.com/profile.php?id=100093840619074',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Nürnberg',
-                        'coords': [49.4480, 11.0728],
-                        'url': '#',
-                        'status': 'unknown'
-                    },
-                    {
-                        'name': 'Glasgow',
-                        'coords': [55.8537, -4.2421],
-                        'url': 'https://discord.gg/gBwJtSpm',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Edinburgh',
-                        'coords': [55.9533, -3.1883],
-                        'url': 'https://www.facebook.com/groups/340174786372157',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Salzburg',
-                        'coords': [47.8014, 13.0448],
-                        'url': 'https://saltyfusion.at/',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Jerusalem / יְרוּשָׁלַיִם / القُدس',
-                        'coords': [31.7683, 35.2137],
-                        'url': 'https://www.facebook.com/bluesjerus',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Freiburg',
-                        'coords': [47.997791, 7.842609],
-                        'url': 'https://t.me/fusiontanzfr',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Kraków',
-                        'coords': [50.0646, 19.9449],
-                        'url': 'https://www.facebook.com/groups/999682140499560',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Lyon',
-                        'coords': [45.7694, 4.8344],
-                        'url': 'http://www.fuzyon.dance',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Valencia',
-                        'coords': [39.4666, -0.375],
-                        'url': 'https://linktr.ee/FusionDanceValencia',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Madrid',
-                        'coords': [40.4169, -3.303],
-                        'url': 'https://www.facebook.com/MiercolesBluesFusion',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Málaga',
-                        'coords': [36.7194, -4.420],
-                        'url': 'https://linktr.ee/malaga_fusion',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Lisboa',
-                        'coords': [38.7223, -9.1393],
-                        'url': 'https://www.facebook.com/HolisticJourneyEvents/events',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Leuven',
-                        'coords': [50.8823, 4.7138],
-                        'url': 'https://www.facebook.com/hearttofeet',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Warszawa',
-                        'coords': [52.2297, 21.0122],
-                        'url': '#',
-                        'status': 'active'
-                    },
-                    {
-                        'name': 'Wien',
-                        'coords': [48.2082, 16.3738],
-                        'url': 'https://www.facebook.com/DanceTheoryWorld',
-                        'status': 'active'
-                    }
+                {{- range $scenes }}
+                {
+                    "name": "{{ .name }}",
+                    "coords": [{{ .lat }}, {{ .lon }}],
+                    "url": "{{ .url }}",
+                    "status": "{{ .status }}",
+                },
+                {{- end }}
                 ];
                 console.log(coordinates)
                 var markers = coordinates.map(city => {
                     var marker = L.marker(city.coords).addTo(mymap)
-                    if (city.url === "#") {
+                    if (city.url === "#" || city.url === "" ) {
                         marker.bindPopup(
                             "<strong>" + city.name + "</strong> (" + city.status + ")"
                         );

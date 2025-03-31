@@ -43,4 +43,4 @@ If the events do not show up after those 15 minutes, contact events[at]fusion-da
 
 ## Custom intro text
 
-If you want, you can also send along a custom intro text that you would like to see displayed on your local scene page before the list of events.
+If you want, you can also send along a custom intro text that you would like to see displayed on your local scene page above the list of events.

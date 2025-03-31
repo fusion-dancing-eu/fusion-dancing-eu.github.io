@@ -1,4 +1,5 @@
-{{- $events := index .Site.Data (.Get "dataKey") -}}
+{{ $dataKey := .Get "dataKey" }}
+{{- $events := index .Site.Data $dataKey -}}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
 <h3>Events</h3>
@@ -44,16 +45,17 @@
     </tbody>
 </table>
 {{- else -}}
-There are currently no upcoming events available.
+<p>There are currently no upcoming events available.</p>
 {{- end -}}
 
+{{ $icsRelUrl := printf "%s/index.ics" $dataKey }}
+{{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
 <p>
-    This calendar is available as an iCalendar (ics) to subscribe to with your favourite calendar client:
-    <a href="{{ .Page.Permalink }}index.ics">{{ .Page.Permalink }}index.ics</a>
-</p>
-<p>
-    Or you can subscribe to the RSS feed of newly added events:
-    <a href="{{ .Page.Permalink }}index.xml">{{ .Page.Permalink }}index.xml</a>
+    Subscribe to these events with your favourite calendar app via
+    <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
+    or <a href="{{ $webCalUrl }}">WebCal</a>.
+    Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
+    newly added events.
 </p>
 
 <p>
