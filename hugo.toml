@@ -2,6 +2,7 @@ baseURL = 'https://fusion-dancing.eu/'
 languageCode = 'en'
 title = 'Fusion Dancing in Europe'
 contentDir = "content"
+timeZone = "Etc/UTC"
 
 [outputs]
   home = ["HTML", "RSS", "calendar"]

@@ -1,4 +1,4 @@
-{{ $dataKey := .Get "dataKey" }}
+{{- $dataKey := .Get "dataKey" -}}
 {{- $events := index .Site.Data $dataKey -}}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
@@ -30,7 +30,6 @@
                 {{- $endTime := .end | time.Format "15:04" -}}
                 {{- $endDate := .end | time.Format "02" -}}
                 {{- $endMonth := .end | time.Format "January" -}}
-                {{- $endYear := .end | time.Format "2006" -}}
 
                 {{- if and (eq $startDate $endDate) (eq $startMonth $endMonth) -}}
                 {{ $startTime }} - {{ $endTime }} {{ $startDate }} {{ $startMonth }} {{ $startYear }}

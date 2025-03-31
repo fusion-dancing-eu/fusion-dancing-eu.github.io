@@ -70,15 +70,15 @@
             <p>
                 The following calendar contains most dance events from across Europe that last for multiple days
                 and dedicate at least roughly half their resources to Fusion dancing.
-                For social dances and other smaller or shorter events, make sure to check out the individual pages
-                and calendars of the local Fusion scenes via the map or list below.
+                For social dances and other events, make sure to check out the individual pages and calendars of
+                the local Fusion scenes via the map or list below.
                 There is also <a href="http://fusioncal.com" target="_blank">fusioncal.com</a> that features Fusion
                 events world wide.
             </p>
             {{- $icsRelUrl := "index.ics" }}
             {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
             <p>
-                Subscribe to these events with your favourite calendar app via
+                You can subscribe to the events below with your favourite calendar app via
                 <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
                 or <a href="{{ $webCalUrl }}">WebCal</a>.
                 Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of

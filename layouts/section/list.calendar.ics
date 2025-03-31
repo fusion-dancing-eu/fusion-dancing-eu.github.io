@@ -9,9 +9,9 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:{{ .title | urlize }}@fusion-dancing.eu
 SUMMARY:{{ replace .title "," "\\," }}
-DTSTART;VALUE=DATE-TIME:{{ .start | dateFormat "20060102T150405Z" }}
+DTSTART;VALUE=DATE-TIME:{{ .start_utc | dateFormat "20060102T150405Z" }}
 {{- $end := .end | time.AsTime }}
-DTEND;VALUE=DATE-TIME:{{ .end | dateFormat "20060102T150405Z" }}
+DTEND;VALUE=DATE-TIME:{{ .end_utc | dateFormat "20060102T150405Z" }}
 LOCATION:{{ replace .location "," "\\," }}
 URL:{{ .link }}
 DESCRIPTION:Join us at {{ replace .title "," "\\," }}, {{ replace .location "," "\\," }}! 
