@@ -1,8 +1,4 @@
 @media (max-width: 880px) {
-  #content {
-    width: 90%;
-  }
-
   #content .time {
     width: 100%;
     display: block;
