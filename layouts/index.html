@@ -1,172 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Lukas Grossberger">
+    <meta name="description" content="Fusion Dancing in Europe">
+    <meta name="keywords"
+        content="Fusion, Dancing, Blues, Cross-Over, Community, Documentary, Film, Berlin, Lille, europe, BFF, BearBx, Exchange">
+
+    <title>Fusion Dancing in Europe</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+
+    <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | absURL | safeURL }}">
+    <link rel="stylesheet" type="text/css" href="{{ "/css/mobile.css" | absURL | safeURL }}">
+</head>
+
 <body>
-    <!DOCTYPE html>
+    <div id="content">
+        <h1>Fusion Dancing in Europe</h1>
+        <p>
+            This is a central entry point for Fusion dancing in Europe.
+            Should you have any suggestions for this page, see the contribution details on the bottom of this page.
+        </p>
+        <p>
+            There was once a nice introductory blog post from dancers in the US about their perspective on the
+            history of Fusion, which unfortunately is now only available in parts and with messy formatting from the
+            <a href="https://web.archive.org/web/20210616224538/http://thedancingroot.com/when-fusion-became-fusion-historical-narrative-pt-2/"
+                target="_blank">
+                internet archive</a>.
+            One more recent perspective on what Fusion flavours there are, is
+            <a href="https://flouerdances.com/fusion-continuum/" target="_blank">The Fusion Continuum</a>.
+        </p>
 
-    <html lang="en">
+        <h2>Documentary</h2>
+        <iframe id="doc" src="https://player.vimeo.com/video/393174510?title=0" width="640" height="338"
+            frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <p>
+            Fusion Dancing, a documentary about the growing fusion dance community in Europe, a cultural and social
+            phenomenon.
+            This is an introductory preview for a feature length documentary with an anticipated release date
+            towards
+            the end of 2020.
+            However, due to the COVID-19 pandemic, the release for this documentary had to be postponed.
+        </p>
+        <p>
+            All dances are original interpretations of the music you are hearing at each and every moment.
+            <br>
+            Music:
+            Slow Love (<a href="https://moglebaum.bandcamp.com/" target="_blank">Moglebaum</a>),
+            Aus dem Off (<a href="http://g.co/kgs/gJDSZP" target="_blank">AINIE</a>),
+            Febbraio (<a href="https://amycanbe1.bandcamp.com/" target="_blank">Amycanbe</a>)
+        </p>
+        <p>Want to link to this video somewhere else or share it? Go ahead:
+            <a href="https://vimeo.com/393174510" target="_blank">
+                https://vimeo.com/393174510
+            </a>
+        </p>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <h2>Fusion Calendar Europe</h2>
+        <p>
+            The following calendar contains most dance events from across Europe that last for multiple days
+            and dedicate at least roughly half their resources to Fusion dancing.
+            For shorter social dances and other events, make sure to check out the individual pages and calendars
+            of the local Fusion scenes via the map or list below.
+            There is also <a href="http://fusioncal.com" target="_blank">fusioncal.com</a> that features Fusion
+            events world wide.
+        </p>
+        {{- $icsRelUrl := "index.ics" }}
+        {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
+        <p>
+            You can subscribe to the events below with your favourite calendar app via
+            <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
+            or <a href="{{ $webCalUrl }}">WebCal</a>.
+            Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
+            newly added events.
+        </p>
 
-        <meta name="robots" content="index,follow">
-        <meta name="author" content="Lukas Grossberger">
-        <meta name="description" content="Fusion Dancing in Europe">
-        <meta name="keywords"
-            content="Fusion, Dancing, Blues, Cross-Over, Community, Documentary, Film, Berlin, Lille, europe, BFF, BearBx, Exchange">
+        {{ partial "events.html" . }}
 
-        <title>Fusion Dancing in Europe</title>
+        {{- $scenes := index .Site.Data "scenes" }}
+        <h2>Local Scenes</h2>
+        <p>
+            The following cities have or had local Fusion scenes, click on a marker to find out whether a scene is
+            actively hosting at least monthly events.
+            <br>
+            <center>
+                <div id="fusion_map"></div>
+            </center>
+        </p>
 
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-            crossorigin="" />
-
-        <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | absURL | safeURL }}">
-        <link rel="stylesheet" type="text/css" href="{{ "/css/mobile.css" | absURL | safeURL }}">
-    </head>
-
-    <body>
-        <div id="content">
-            <h1>Fusion Dancing in Europe</h1>
-            <p>
-                This is a central entry point for Fusion dancing in Europe.
-                Should you have any suggestions for this page, see the contribution details on the bottom of this page.
-            </p>
-            <p>
-                There was once a nice introductory blog post from dancers in the US about their perspective on the
-                history of Fusion, which unfortunately is now only available in parts and with messy formatting from the
-                <a href="https://web.archive.org/web/20210616224538/http://thedancingroot.com/when-fusion-became-fusion-historical-narrative-pt-2/"
-                    target="_blank">
-                    internet archive</a>.
-                One more recent perspective on what Fusion flavours there are, is
-                <a href="https://flouerdances.com/fusion-continuum/" target="_blank">The Fusion Continuum</a>.
-            </p>
-
-            <h2>Documentary</h2>
-            <iframe id="doc" src="https://player.vimeo.com/video/393174510?title=0" width="640" height="338"
-                frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <p>
-                Fusion Dancing, a documentary about the growing fusion dance community in Europe, a cultural and social
-                phenomenon.
-                This is an introductory preview for a feature length documentary with an anticipated release date
-                towards
-                the end of 2020.
-                However, due to the COVID-19 pandemic, the release for this documentary had to be postponed.
-            </p>
-            <p>
-                All dances are original interpretations of the music you are hearing at each and every moment.
-                <br>
-                Music:
-                Slow Love (<a href="https://moglebaum.bandcamp.com/" target="_blank">Moglebaum</a>),
-                Aus dem Off (<a href="http://g.co/kgs/gJDSZP" target="_blank">AINIE</a>),
-                Febbraio (<a href="https://amycanbe1.bandcamp.com/" target="_blank">Amycanbe</a>)
-            </p>
-            <p>Want to link to this video somewhere else or share it? Go ahead:
-                <a href="https://vimeo.com/393174510" target="_blank">
-                    https://vimeo.com/393174510
-                </a>
-            </p>
-
-            <h2>Fusion Calendar Europe</h2>
-            <p>
-                The following calendar contains most dance events from across Europe that last for multiple days
-                and dedicate at least roughly half their resources to Fusion dancing.
-                For shorter social dances and other events, make sure to check out the individual pages and calendars
-                of the local Fusion scenes via the map or list below.
-                There is also <a href="http://fusioncal.com" target="_blank">fusioncal.com</a> that features Fusion
-                events world wide.
-            </p>
-            {{- $icsRelUrl := "index.ics" }}
-            {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
-            <p>
-                You can subscribe to the events below with your favourite calendar app via
-                <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
-                or <a href="{{ $webCalUrl }}">WebCal</a>.
-                Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
-                newly added events.
-            </p>
-
-            {{ partial "events.html" . }}
-
-            {{- $scenes := index .Site.Data "scenes" }}
-            <h2>Local Scenes</h2>
-            <p>
-                The following cities have or had local Fusion scenes, click on a marker to find out whether a scene is
-                actively hosting at least monthly events.
-                <br>
-                <center>
-                    <div id="fusion_map"></div>
-                </center>
-            </p>
-
-            <p>
-                In case you prefer a list of the local fusion scenes instead of the map above:
-                <ul id="scenes">
-                    {{- range sort $scenes "name" -}}
-                    {{- if .url }}
-                    <a href="{{ .url }}">
-                    {{- end }}
-                        <li>
-                            {{ .name }}
-                            {{- if ne .status "active" }}
-                            ({{ .status }})
-                            {{- end }}
-                        </li>
-                    {{- if .url }}
-                    </a>
-                    {{- end }}
-                    {{- end}}
-                </ul>
-            </p>
-
-            <p>
-                <hr>
-            </p>
-
-            <p style="font-size:80%;text-align:center;">
-                Contribute to this page by opening issues / pull requests on
-                <a
-                    href="https://github.com/fusion-dancing-eu/fusion-dancing-eu.github.io?tab=readme-ov-file#adding-events">GitHub</a>,
-                <br>
-                or send an email to events[at]fusion-dancing.eu
-            </p>
-
-            <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-                integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-                crossorigin=""></script>
-            <script>
-                var mymap = L.map('fusion_map').setView([48.5, 10.], 4);
-                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                    maxZoom: 18,
-                    id: 'mapbox/streets-v11',
-                    accessToken: 'pk.eyJ1IjoibHVncm8iLCJhIjoiY2s1ODA2czc1MDllNjNqbXUwY3ZnYjgwdCJ9.sECYtBm04YVYez3weHZvIQ'
-                }).addTo(mymap);
-                var markers = [];
-                var coordinates = [
-                {{- range $scenes }}
-                {
-                    "name": "{{ .name }}",
-                    "coords": [{{ .lat }}, {{ .lon }}],
-                    "url": "{{ .url }}",
-                    "status": "{{ .status }}",
-                },
+        <p>
+            In case you prefer a list of the local fusion scenes instead of the map above:
+            <ul id="scenes">
+                {{- range sort $scenes "name" -}}
+                {{- if .url }}
+                <a href="{{ .url }}">
                 {{- end }}
-                ];
-                console.log(coordinates)
-                var markers = coordinates.map(city => {
-                    var marker = L.marker(city.coords).addTo(mymap)
-                    if (city.url === "#" || city.url === "" ) {
-                        marker.bindPopup(
-                            "<strong>" + city.name + "</strong> (" + city.status + ")"
-                        );
-                    } else {
-                        marker.bindPopup(
-                            "<strong><a href='" + city.url + "' target='_blank'>" + city.name + "</a></strong> (" + city.status + ")"
-                        );
-                    }
-                });
-            </script>
-        </div>
-    </body>
+                    <li>
+                        {{ .name }}
+                        {{- if ne .status "active" }}
+                        ({{ .status }})
+                        {{- end }}
+                    </li>
+                {{- if .url }}
+                </a>
+                {{- end }}
+                {{- end}}
+            </ul>
+        </p>
 
-    </html>
+        <p>
+            <hr>
+        </p>
+
+        <p style="font-size:80%;text-align:center;">
+            Contribute to this page by opening issues / pull requests on
+            <a
+                href="https://github.com/fusion-dancing-eu/fusion-dancing-eu.github.io?tab=readme-ov-file#adding-events">GitHub</a>,
+            <br>
+            or send an email to events[at]fusion-dancing.eu
+        </p>
+
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+        <script>
+            var mymap = L.map('fusion_map').setView([48.5, 10.], 4);
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox/streets-v11',
+                accessToken: 'pk.eyJ1IjoibHVncm8iLCJhIjoiY2s1ODA2czc1MDllNjNqbXUwY3ZnYjgwdCJ9.sECYtBm04YVYez3weHZvIQ'
+            }).addTo(mymap);
+            var markers = [];
+            var coordinates = [
+            {{- range $scenes }}
+            {
+                "name": "{{ .name }}",
+                "coords": [{{ .lat }}, {{ .lon }}],
+                "url": "{{ .url }}",
+                "status": "{{ .status }}",
+            },
+            {{- end }}
+            ];
+            console.log(coordinates)
+            var markers = coordinates.map(city => {
+                var marker = L.marker(city.coords).addTo(mymap)
+                if (city.url === "#" || city.url === "" ) {
+                    marker.bindPopup(
+                        "<strong>" + city.name + "</strong> (" + city.status + ")"
+                    );
+                } else {
+                    marker.bindPopup(
+                        "<strong><a href='" + city.url + "' target='_blank'>" + city.name + "</a></strong> (" + city.status + ")"
+                    );
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>
