@@ -6,7 +6,7 @@
 }
 
 body {
-	font-family: "Roboto";
+	font-family: "Roboto", Helvetica, sans-serif;
 	background: #fff;
 	background: url("https://fusion-dancing.eu/img/bg2.jpg");
 	background-size: cover;
