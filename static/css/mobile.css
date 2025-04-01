@@ -1,4 +1,14 @@
 @media (max-width: 880px) {
+  body {
+    background: none;
+  }
+
+  #content {
+    width: 100%;
+    padding: 0px 18px 12px 18px;
+    box-shadow: none;
+  }
+
   #content .time {
     width: 100%;
     display: block;
