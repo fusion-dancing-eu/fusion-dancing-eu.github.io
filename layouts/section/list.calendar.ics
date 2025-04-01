@@ -7,7 +7,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 {{- range $event := $data }}
 BEGIN:VEVENT
-UID:{{ .title | urlize }}@fusion-dancing.eu
+UID:{{ .title | urlize }}-{{ .start_utc | dateFormat "20060102" }}-{{ $section }}@fusion-dancing.eu
 SUMMARY:{{ replace .title "," "\\," }}
 DTSTART;VALUE=DATE-TIME:{{ .start_utc | dateFormat "20060102T150405Z" }}
 {{- $end := .end | time.AsTime }}

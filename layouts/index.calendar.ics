@@ -6,7 +6,7 @@ METHOD:PUBLISH
 {{- range $year, $events := .Site.Data.events }}
 {{- range $events }}
 BEGIN:VEVENT
-UID:{{ .name | urlize }}@fusion-dancing.eu
+UID:{{ .name | urlize }}-{{ .start | dateFormat "20060102" }}@fusion-dancing.eu
 SUMMARY:{{ replace .name "," "\\," }}
 DTSTART;VALUE=DATE:{{ .start | dateFormat "20060102" }}
 {{ $end := .end | time.AsTime -}}
