@@ -7,6 +7,29 @@ import requests
 
 HERE = Path(__file__).parent
 
+SOURCES = [
+    (
+        "darmstadt",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Darmstadt",
+    ),
+    (
+        "frankfurt",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Frankfurt",
+    ),
+    (
+        "heidelberg",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Heidelberg",
+    ),
+    # (
+    #     "stuttgart",
+    #     "Europe/Berlin",
+    #     "https://docs.google.com/spreadsheets/d//gviz/tq?tqx=out:csv&sheet=",
+    # ),
+]
+
 
 def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
     # Google Sheet CSV URL
@@ -48,23 +71,7 @@ def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
 
 if __name__ == "__main__":
     errors = False
-    for name, time_zone, url in [
-        (
-            "darmstadt",
-            "Europe/Berlin",
-            "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Darmstadt",
-        ),
-        (
-            "frankfurt",
-            "Europe/Berlin",
-            "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Frankfurt",
-        ),
-        (
-            "heidelberg",
-            "Europe/Berlin",
-            "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Heidelberg",
-        ),
-    ]:
+    for name, time_zone, url in SOURCES:
         try:
             main(
                 sheet_csv_url=url,

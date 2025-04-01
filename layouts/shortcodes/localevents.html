@@ -1,5 +1,13 @@
 {{- $dataKey := .Get "dataKey" -}}
-{{- $events := index .Site.Data $dataKey -}}
+{{- $section := .Get "section" | default $dataKey -}}
+{{- $dataKeys := split $dataKey "," -}}
+{{- $events := slice -}}
+{{- range $dataKeys }}
+{{- $data := index $.Site.Data . -}}
+{{- if $data }}
+{{- $events = $events | append $data -}}
+{{- end }}
+{{- end }}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
 <h3>Events</h3>
@@ -30,12 +38,14 @@
                 {{- $endTime := .end | time.Format "15:04" -}}
                 {{- $endDate := .end | time.Format "02" -}}
                 {{- $endMonth := .end | time.Format "January" -}}
+                {{- $endYear := .end | time.Format "2006" -}}
 
                 {{- if and (eq $startDate $endDate) (eq $startMonth $endMonth) -}}
-                {{ $startTime }} - {{ $endTime }} {{ $startDate }} {{ $startMonth }} {{ $startYear }}
+                {{ $startDate }} {{ $startMonth }} {{ $startYear }},
+                {{ $startTime }} - {{ $endTime }}
                 {{- else -}}
-                {{ $startTime }} {{ $startDate }} {{ $startMonth }} - {{ $endTime }} {{ $endDate }} {{ $endMonth }} {{
-                $startYear }}
+                {{ $startDate }} {{ $startMonth }} {{ $startYear }}, {{ $startTime }}
+                - {{ $endDate }} {{ $endMonth }} {{ $endYear }}, {{ $endTime }}
                 {{- end -}}
             </td>
             <td>{{ .location }}</td>
@@ -47,7 +57,7 @@
 <p>There are currently no upcoming events available.</p>
 {{- end -}}
 
-{{ $icsRelUrl := printf "%s/index.ics" $dataKey }}
+{{ $icsRelUrl := printf "%s/index.ics" $section }}
 {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
 <p>
     Subscribe to these events with your favourite calendar app via

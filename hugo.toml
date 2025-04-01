@@ -5,8 +5,8 @@ contentDir = "content"
 timeZone = "Etc/UTC"
 
 [outputs]
-  home = ["HTML", "RSS", "calendar"]
-  section = ["HTML", "RSS", "calendar"]
+home = ["HTML", "RSS", "calendar"]
+section = ["HTML", "RSS", "calendar"]
 
 [security]
-  enableInlineShortcodes = true
+enableInlineShortcodes = true
