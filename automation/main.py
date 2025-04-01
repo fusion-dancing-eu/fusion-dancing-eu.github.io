@@ -17,12 +17,12 @@ def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
     df = pd.read_csv(
         StringIO(response.text),
         usecols=["Title", "Start", "End", "Location", "Added", "Link"],
-        parse_dates=["Start", "End"],
     )
     df = df.rename(columns={c: c.lower() for c in df.columns})
 
     df = df.fillna("")
 
+    df["start"] = pd.to_datetime(df["start"], format="mixed")
     df["start_utc"] = (
         df["start"]
         .dt.tz_localize(time_zone)
@@ -30,6 +30,8 @@ def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
         .dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     )
     df["start"] = df["start"].dt.strftime("%Y-%m-%dT%H:%M:%S")
+
+    df["end"] = pd.to_datetime(df["end"], format="mixed")
     df["end_utc"] = (
         df["end"]
         .dt.tz_localize(time_zone)
@@ -70,7 +72,7 @@ if __name__ == "__main__":
                 time_zone=time_zone,
             )
         except Exception as e:
-            print(f"Error for ${name}:", e)
+            print(f"Error for {name}:", e)
             errors = True
     if errors:
         sys.exit(1)
