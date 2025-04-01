@@ -1,13 +1,5 @@
-{{- $dataKey := .Get "dataKey" -}}
-{{- $section := .Get "section" | default $dataKey -}}
-{{- $dataKeys := split $dataKey "," -}}
-{{- $events := slice -}}
-{{- range $dataKeys }}
-{{- $data := index $.Site.Data . -}}
-{{- if $data }}
-{{- $events = $events | append $data -}}
-{{- end }}
-{{- end }}
+{{- $section := .Get "section" -}}
+{{- $events := index $.Site.Data $section -}}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
 <h3>Events</h3>

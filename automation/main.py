@@ -30,8 +30,16 @@ SOURCES = [
     # ),
 ]
 
+GROUPS = {
+    "rhein-main-neckar": ["darmstadt", "heidelberg", "frankfurt", "stuttgart"],
+}
 
-def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
+
+def to_yaml_file_path(name: str) -> Path:
+    return HERE.parent / "data" / f"{name}.yaml"
+
+
+def fetch_events(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
     # Google Sheet CSV URL
     response = requests.get(sheet_csv_url)
     response.raise_for_status()
@@ -69,17 +77,28 @@ def main(sheet_csv_url: str, output_yaml_file_path: Path, time_zone: str):
     output_yaml_file_path.write_text(yaml_output)
 
 
+def generate_group(group: str, members: list[str]):
+    events = []
+    for member in members:
+        events.extend(yaml.safe_load(to_yaml_file_path(member).read_text()))
+    yaml_output = yaml.dump(events, sort_keys=False, allow_unicode=True)
+    to_yaml_file_path(group).write_text(yaml_output)
+
+
 if __name__ == "__main__":
     errors = False
     for name, time_zone, url in SOURCES:
         try:
-            main(
+            fetch_events(
                 sheet_csv_url=url,
-                output_yaml_file_path=HERE.parent / "data" / f"{name}.yaml",
+                output_yaml_file_path=to_yaml_file_path(name),
                 time_zone=time_zone,
             )
         except Exception as e:
-            print(f"Error for {name}:", e)
+            print(f"Error fetching events for {name}:", e)
             errors = True
     if errors:
         sys.exit(1)
+
+    for group, members in GROUPS.items():
+        generate_group(group, members)

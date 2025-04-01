@@ -10,4 +10,4 @@ To get in contact with organisers and other local Fusion dancers, join our [Sign
 Make sure to check out the Fusion socials in neighbouring cities like [Darmstadt](/darmstadt), [Frankfurt](/frankfurt) or [Stuttgart](/stuttgart).
 You can also see all of their events in the [Rhein-Main-Neckar](/rhein-main-neckar) region.
 
-{{<localevents dataKey="heidelberg">}}
+{{<localevents section="heidelberg">}}

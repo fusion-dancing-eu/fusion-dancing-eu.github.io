@@ -10,4 +10,4 @@ If you want to reach out to the Darmstadt organisers, send an email to DA.fusion
 Make sure to check out the Fusion socials in neighbouring cities like [Frankfurt](/frankfurt), [Heidelberg](/heidelberg) or [Stuttgart](/stuttgart).
 You can also see all of their events in the [Rhein-Main-Neckar](/rhein-main-neckar) region.
 
-{{<localevents dataKey="darmstadt">}}
+{{<localevents section="darmstadt">}}
