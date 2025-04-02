@@ -36,6 +36,11 @@
     width: 100%;
   }
 
+  ul#scenes {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   #doc {
     width: 100%;
     height: auto;

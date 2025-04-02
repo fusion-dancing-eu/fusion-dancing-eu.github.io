@@ -123,6 +123,8 @@ ul#scenes {
 	column-gap: 20px;
 	list-style-type: none;
 	padding: 0;
+	margin-left: 2.6em;
+	margin-right: 2.6em;
 }
 
 ul#scenes li {
