@@ -1,6 +1,8 @@
 name: Deploy Hugo site to Pages
 
 on:
+  schedule:
+    - cron: "6 2 * * *"
   workflow_run:
     workflows: ["Update local scene events"]
     types:
