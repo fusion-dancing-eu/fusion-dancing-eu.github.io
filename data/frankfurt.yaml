@@ -6,3 +6,11 @@
   link: ''
   start_utc: '2025-05-31T16:00:00Z'
   end_utc: '2025-05-31T20:00:00Z'
+- title: Workshop (1h) & Social Dance (3h)
+  start: '2025-06-14T18:00:00'
+  end: '2025-06-14T22:00:00'
+  location: Baita Studio, Frankfurt
+  added: '2025-05-11'
+  link: ''
+  start_utc: '2025-06-14T16:00:00Z'
+  end_utc: '2025-06-14T20:00:00Z'
