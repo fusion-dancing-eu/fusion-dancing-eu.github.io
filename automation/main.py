@@ -23,11 +23,11 @@ SOURCES = [
         "Europe/Berlin",
         "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Heidelberg",
     ),
-    # (
-    #     "stuttgart",
-    #     "Europe/Berlin",
-    #     "https://docs.google.com/spreadsheets/d//gviz/tq?tqx=out:csv&sheet=",
-    # ),
+    (
+        "stuttgart",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Stuttgart",
+    ),
 ]
 
 GROUPS = {
