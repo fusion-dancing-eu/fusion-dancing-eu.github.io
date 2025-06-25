@@ -1,5 +1,14 @@
+{{- $past := .Get "past" -}}
 {{- range $year, $events := .Site.Data.events -}}
 {{- if ge (int $year) now.Year -}}
+{{- $thresholdDate := now.AddDate 0 0 0 -}}
+{{- $selectedEvents := slice -}}
+{{- if eq $past "true" -}}
+{{- $selectedEvents = where $events "end" "lt" ($thresholdDate.Format "2006-01-02T15:04:05Z07:00") -}}
+{{- else -}}
+{{- $selectedEvents = where $events "end" "ge" ($thresholdDate.Format "2006-01-02T15:04:05Z07:00") -}}
+{{- end -}}
+{{- if gt (len $selectedEvents) 0 -}}
 <h3>Events {{ $year }}</h3>
 <table class="table fusion-calendar">
     <thead>
@@ -10,9 +19,7 @@
         </tr>
     </thead>
     <tbody>
-        {{- $thresholdDate := now.AddDate 0 0 0 -}}
-        {{- $upcomingEvents := where $events "end" "ge" ($thresholdDate.Format "2006-01-02T15:04:05Z07:00") -}}
-        {{- range sort $upcomingEvents "start" -}}
+        {{- range sort $selectedEvents "start" -}}
         <tr>
             <td>
                 {{- $startDate := .start | time.Format "02" -}}
@@ -38,5 +45,6 @@
         {{- end -}}
     </tbody>
 </table>
+{{- end -}}
 {{- end -}}
 {{- end -}}

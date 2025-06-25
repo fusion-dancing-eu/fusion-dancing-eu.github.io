@@ -77,14 +77,15 @@
         {{- $icsRelUrl := "index.ics" }}
         {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
         <p>
-            You can subscribe to the events below with your favourite calendar app via
+            You can subscribe to events with your favourite calendar app via
             <a href="{{ $icsRelUrl | absURL | safeURL }}">ICS</a>
             or <a href="{{ $webCalUrl }}">WebCal</a>.
             Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
             newly added events.
+            Past events are listed in the <a href="{{ .Page.Permalink }}/archive">archive</a>.
         </p>
 
-        {{ partial "events.html" . }}
+        {{ .Page.RenderString (printf "{{< events >}}" ) }}
 
         {{- $scenes := index .Site.Data "scenes" }}
         <h2>Local Scenes</h2>
