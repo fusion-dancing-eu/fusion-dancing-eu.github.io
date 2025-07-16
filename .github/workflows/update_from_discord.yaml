@@ -33,6 +33,7 @@ jobs:
           echo "update_title=$RESULT" >> $GITHUB_OUTPUT
 
       - name: Create Pull Request if changes detected
+        if: ${{ steps.update.outputs.update_title != '' }}
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
