@@ -215,6 +215,13 @@
   location: Brussels, Belgium
   link: https://linktr.ee/intothebody
   added: 2024-11-05
+- name: Microscope
+  start: '2025-10-03'
+  end: '2025-10-05'
+  location: Bristol, UK
+  link: https://www.kaleidoscopefusion.com/microscope
+  added: '2025-07-16'
+  discord_event_id: '1393636295661588522'
 2026:
 - name: Playground Fusion
   start: 2026-02-06
