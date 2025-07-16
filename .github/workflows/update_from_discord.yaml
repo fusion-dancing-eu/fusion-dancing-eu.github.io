@@ -1,0 +1,44 @@
+name: Update events from Discord
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Ensure full history for branching
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # - name: Install dependencies
+      #   run: |
+      #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run update script
+        id: update
+        run: |
+          RESULT=$(python automation/discord.py)
+          echo "update_title=$RESULT" >> $GITHUB_OUTPUT
+
+      - name: Create Pull Request if changes detected
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Discord update: ${{ steps.update.outputs.update_title }}"
+          branch: "discord/${{ steps.update.outputs.update_title }}"
+          title: "Discord update: ${{ steps.update.outputs.update_title }}"
+          body: |
+            This PR was created automatically by the GitHub Actions workflow.
+          base: main
+          labels: automated
+          # Only open a PR if there are changes; the action handles this by default

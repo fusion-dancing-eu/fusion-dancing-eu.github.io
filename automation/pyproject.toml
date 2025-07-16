@@ -1,7 +1,7 @@
 [project]
-name = "fusion-events-google-sheet"
+name = "fusion-events-management"
 version = "0.1.0"
-description = ""
+description = "Fetching local community events from CSV files and weekenders from Discord."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -11,4 +11,4 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["black"]
+dev = ["black", "pytest"]

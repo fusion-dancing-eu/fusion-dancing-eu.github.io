@@ -4,5 +4,7 @@ To add a new local community sub-page, provide a URL to a CSV file with the colu
 
 ## Development setup
 
-Install uv
+Install uv and `uv run python script.py`
 
+## Discord import TODOs
+- [ ] Use discord event ID to handle updates
