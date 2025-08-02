@@ -8,10 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="robots" content="index,follow">
-    <meta name="author" content="Lukas Grossberger">
     <meta name="description" content="Fusion Dancing in Europe">
     <meta name="keywords"
-        content="Fusion, Dancing, Blues, Cross-Over, Community, Documentary, Film, Berlin, Lille, europe, BFF, BearBx, Exchange">
+        content="Fusion, Dancing, Blues, Forro, West Coast Swing, Zouk, Cross-Over, Community, Documentary, Film, Europe, Exchange, Retreat, Weekend">
 
     <title>Fusion Dancing in Europe</title>
 
@@ -19,16 +18,16 @@
         integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
         crossorigin="" />
 
-    <link rel="stylesheet" type="text/css" href="{{ "/css/main.css" | absURL | safeURL }}">
-    <link rel="stylesheet" type="text/css" href="{{ "/css/mobile.css" | absURL | safeURL }}">
+    <link rel="stylesheet" type="text/css" href='{{ "/css/main.css" | absURL | safeURL }}'>
+    <link rel="stylesheet" type="text/css" href='{{ "/css/mobile.css" | absURL | safeURL }}'>
 </head>
 
 <body>
     <div id="content">
         <h1>Fusion Dancing in Europe</h1>
         <p>
-            This is a central entry point for Fusion dancing in Europe.
-            Should you have any suggestions for this page, see the contribution details on the bottom of this page.
+            This is a central entry point for Fusion dancing in Europe with
+            <a href="#calendar">events</a> and <a href="#communities">communities</a> listed below.
         </p>
         <p>
             There was once a nice introductory blog post from dancers in the US about their perspective on the
@@ -38,6 +37,10 @@
                 internet archive</a>.
             One more recent perspective on what Fusion flavours there are, is
             <a href="https://flouerdances.com/fusion-continuum/" target="_blank">The Fusion Continuum</a>.
+        </p>
+        <p>
+            You can engage with Fusion dancers from across Europe and the world in the
+            <a href="https://discord.gg/TmUtNH6A" target="_blank">European Fusion Dancing Discord</a> community.
         </p>
 
         <h2>Documentary</h2>
@@ -65,7 +68,7 @@
             </a>
         </p>
 
-        <h2>Fusion Calendar Europe</h2>
+        <h2 id="calendar">Fusion Calendar Europe</h2>
         <p>
             The following calendar contains most dance events from across Europe that last for multiple days
             and dedicate at least roughly half their resources to Fusion dancing.
@@ -88,9 +91,9 @@
         {{ .Page.RenderString (printf "{{< events >}}" ) }}
 
         {{- $scenes := index .Site.Data "scenes" }}
-        <h2>Local Scenes</h2>
+        <h2 id="communities">Local Communities</h2>
         <p>
-            The following cities have or had local Fusion scenes, click on a marker to find out whether a scene is
+            The following cities have or had local Fusion communities, click on a marker to find out whether a community is
             actively hosting at least monthly events.
             <br>
             <center>
@@ -99,7 +102,7 @@
         </p>
 
         <p>
-            In case you prefer a list of the local fusion scenes instead of the map above:
+            In case you prefer a list of the local Fusion communities instead of the map above:
             <ul id="scenes">
                 {{- range sort $scenes "name" -}}
                 {{- if .url }}
@@ -123,6 +126,9 @@
         </p>
 
         <p style="font-size:80%;text-align:center;">
+            Adding events via
+            <a href="https://discord.gg/TmUtNH6A" target="_blank">Discord</a>
+            automatically proposes them for here as well.<br>
             Contribute to this page by opening issues / pull requests on
             <a
                 href="https://github.com/fusion-dancing-eu/fusion-dancing-eu.github.io?tab=readme-ov-file#adding-events">GitHub</a>,

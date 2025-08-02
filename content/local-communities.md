@@ -1,10 +1,11 @@
 ---
-title: "Fusion Dancing Local Scene Integration"
+title: "Fusion Dancing Local Community Integration"
+alias: "local-scenes"
 ---
 
-# Integrating a local scene
+# Integrating a local community
 
-To add your local scene with your regular socials and other smaller events on a dedicated sub-page like https://fusion-dancing.eu/frankfurt, you need to send the link of a Google Sheet with all your events to events[at]fusion-dancing.eu
+To add your local community with your regular socials and other smaller events on a dedicated sub-page like https://fusion-dancing.eu/frankfurt, you need to send the link of a Google Sheet with all your events to events[at]fusion-dancing.eu
 
 ## Google Sheet
 
@@ -44,4 +45,4 @@ If the events do not show up after those 15 minutes, contact events[at]fusion-da
 
 ## Custom intro text
 
-If you want, you can also send along a custom intro text that you would like to see displayed on your local scene page above the list of events.
+If you want, you can also send along a custom intro text that you would like to see displayed on your local community page above the list of events.
