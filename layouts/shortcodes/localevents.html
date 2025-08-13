@@ -1,4 +1,5 @@
 {{- $section := .Get "section" -}}
+{{- $showOnboarding := lower (default "true" (.Get "onboarding")) -}}
 {{- $events := index $.Site.Data $section -}}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
@@ -59,6 +60,7 @@
     newly added events.
 </p>
 
+{{- if eq $showOnboarding "true" -}}
 <p>
     <hr>
 </p>
@@ -66,3 +68,4 @@
     Are you an organiser and want one of these local community pages for yourself? See onboarding instructions <a
         href="/local-communities">here</a>.
 </p>
+{{- end -}}

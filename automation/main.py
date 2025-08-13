@@ -28,6 +28,11 @@ SOURCES = [
         "Europe/Berlin",
         "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Stuttgart",
     ),
+    (
+        "dance-for-justice",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1ykb0g5aIaNzc2AfmMOsF3Tm7G5UChOeXM85E_Di7GmA/gviz/tq?tqx=out:csv&sheet=Events",
+    ),
 ]
 
 GROUPS = {
