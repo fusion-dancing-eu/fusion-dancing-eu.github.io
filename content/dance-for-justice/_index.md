@@ -19,4 +19,5 @@ We dance not just for ourselves — but for the world we are building.
 ## How to participate?
 
 Want to be part of this and support the cause?
-More information will follow.f you can't wait, reach out via the [Discord community](https://discord.gg/28ej3V2vQG).
+More information will follow.
+If you can't wait, reach out via the [Discord community](https://discord.gg/28ej3V2vQG).
