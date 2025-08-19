@@ -18,6 +18,4 @@ We dance not just for ourselves — but for the world we are building.
 
 ## How to participate?
 
-Want to be part of this and support the cause?
-More information will follow.
-If you can't wait, reach out via the [Discord community](https://discord.gg/28ej3V2vQG).
+In case you would like to host a Dance for Justice event and have it listed above, or in case you want to contribute music as a DJ, fill out this form: https://forms.gle/guCy94g2Jkc774Mz9
