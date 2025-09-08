@@ -73,7 +73,7 @@
 - title: Workshop & Social
   start: '2025-12-06T19:00:00'
   end: '2025-12-06T23:00:00'
-  location: tba
+  location: tba, Heidelberg
   added: '2025-08-24'
   link: ''
   start_utc: '2025-12-06T18:00:00Z'
@@ -111,6 +111,15 @@
   link: ''
   start_utc: '2025-08-30T16:00:00Z'
   end_utc: '2025-08-30T20:00:00Z'
+- title: 'Presented by FRiDA: Tea Dance for Justice / Workshop: "tba" (1h) & Social
+    Dance (3h)'
+  start: '2025-11-29T14:00:00'
+  end: '2025-11-29T18:00:00'
+  location: LSKH Queeres Kulturhaus, Frankfurt
+  added: '2025-09-08'
+  link: ''
+  start_utc: '2025-11-29T13:00:00Z'
+  end_utc: '2025-11-29T17:00:00Z'
 - title: Workshop & Social
   start: '2025-06-24T19:30:00'
   end: '2025-06-24T23:00:00'
