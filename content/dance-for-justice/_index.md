@@ -4,7 +4,7 @@ title: "Dance for Justice"
 
 # Dance for Justice
 
-Our **house parties** are more than just a celebration of movement — they are a statement for safety and inclusion. Through the vibrant, inclusive energy of Fusion dance, we create space where bodies are celebrated, boundaries are respected, and community thrives in safety and solidarity.
+Our **parties** are more than just a celebration of movement — they are a statement for safety and inclusion. Through the vibrant, inclusive energy of Fusion dance, we create space where bodies are celebrated, boundaries are respected, and community thrives in safety and solidarity.
 
 We dance in **protest of rape culture** - a culture that normalizes violence, silences survivors, and devalues consent. We reject the myths, the silence, and the systems that perpetuate sexual harm. In their place, we move with intention, with joy, and with fierce compassion.
 
