@@ -133,9 +133,17 @@
   start: '2025-10-26T18:00:00'
   end: '2025-10-26T22:00:00'
   location: Tanzschule momento cubano (Dachgeschoss), Frankfurt
-  added: '2025-09-10'
+  added: '2025-10-01'
   link: ''
   start_utc: '2025-10-26T17:00:00Z'
+  end_utc: '2025-10-26T21:00:00Z'
+- title: Mainz Blues/Fusion-Workshop & Party
+  start: '2025-10-11T10:30:00'
+  end: '2025-10-26T22:00:00'
+  location: Tanzschule momento cubano (Dachgeschoss), Frankfurt
+  added: '2025-09-10'
+  link: https://fxx7.short.gy/TGB_BluesFusionWSParty_2025-10-11
+  start_utc: '2025-10-11T08:30:00Z'
   end_utc: '2025-10-26T21:00:00Z'
 - title: 'FRiDA Fusion: Tea Dance for Justice / Workshop: "tba" (1h) & Social Dance
     (3h) | FRiDA = Frankfurt and Darmstadt cooperation'
