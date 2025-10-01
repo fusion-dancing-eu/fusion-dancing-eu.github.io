@@ -285,3 +285,10 @@
   location: Toulouse, France
   link: https://www.toulousefusion.fr/fusionweek-end
   added: 2025-09-24
+- name: Camp Kaleidoscope
+  start: '2026-03-22'
+  end: '2026-03-27'
+  location: Near Bristol, UK
+  link: https://www.kaleidoscopefusion.com/camp
+  added: '2025-10-01'
+  discord_event_id: '1393636896076337322'
