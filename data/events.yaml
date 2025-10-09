@@ -247,6 +247,13 @@
   link: https://wa.link/7a6g98
   added: '2025-08-19'
   discord_event_id: '1406593169587437689'
+- name: The Vienna Winter Wiggle
+  start: '2025-12-19'
+  end: '2025-12-21'
+  location: Vienna, Austria
+  link: https://forms.gle/Xy8F1qqCn9BqSvrX7
+  added: '2025-10-09'
+  discord_event_id: '1393637400114102322'
 2026:
 - name: Playground Fusion
   start: 2026-02-06
@@ -285,6 +292,7 @@
   location: Toulouse, France
   link: https://www.toulousefusion.fr/fusionweek-end
   added: 2025-09-24
+  discord_event_id: '1425210076825915444'
 - name: Camp Kaleidoscope
   start: '2026-03-22'
   end: '2026-03-27'
