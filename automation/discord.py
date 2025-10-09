@@ -166,7 +166,11 @@ def matches_existing_event(
     existing_events_that_year = existing_events.get(year)
     if not existing_events_that_year:
         return False
-    matching_events = [e for e in existing_events_that_year if event.name == e["name"]]
+    matching_events = [
+        e
+        for e in existing_events_that_year
+        if event.name == e["name"] or event.id == e.get("discord_event_id", None)
+    ]
     return matching_events
 
 
