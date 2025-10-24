@@ -154,23 +154,35 @@
   link: https://fxx7.short.gy/TGB_BluesFusionWSParty_2025-10-11
   start_utc: '2025-10-11T18:00:00Z'
   end_utc: '2025-10-10T22:00:00Z'
-- title: 'Workshop: "tba" (1h) & Social Dance (3h)'
+- title: 'Workshop: "Trio dynamics" (1h) & Social Dance (3h)'
   start: '2025-10-26T18:00:00'
   end: '2025-10-26T22:00:00'
-  location: Tanzschule momento cubano (Dachgeschoss), Frankfurt
+  location: 'Tanzschule momento cubano (Dachgeschoss), (archway between "Tedi" and
+    "Sanitätshaus Raab".
+
+    turn right at end of alley) Frankfurt'
   added: '2025-09-11'
   link: ''
   start_utc: '2025-10-26T17:00:00Z'
   end_utc: '2025-10-26T21:00:00Z'
-- title: 'FRiDA Fusion: Tea Dance for Justice / Workshop: "tba" (1h) & Social Dance
-    (3h) | FRiDA = Frankfurt and Darmstadt cooperation'
-  start: '2025-11-29T14:00:00'
-  end: '2025-11-29T18:00:00'
+- title: 'FRiDA Fusion: Tea Dance for Justice => Will happen in Darmstadt (see there)
+    | FRiDA = Frankfurt and Darmstadt cooperation'
+  start: '2025-11-30T16:00:00'
+  end: '2025-11-30T20:00:00'
   location: LSKH Queeres Kulturhaus, Frankfurt
   added: '2025-09-08'
   link: ''
-  start_utc: '2025-11-29T13:00:00Z'
-  end_utc: '2025-11-29T17:00:00Z'
+  start_utc: '2025-11-30T15:00:00Z'
+  end_utc: '2025-11-30T19:00:00Z'
+- title: 'FRiDA Fusion: Will happen in Darmstadt (see there) | FRiDA = Frankfurt and
+    Darmstadt cooperation'
+  start: '2025-12-14T16:00:00'
+  end: '2025-12-14T20:00:00'
+  location: ''
+  added: ''
+  link: ''
+  start_utc: '2025-12-14T15:00:00Z'
+  end_utc: '2025-12-14T19:00:00Z'
 - title: Workshop & Social
   start: '2025-06-24T19:30:00'
   end: '2025-06-24T23:00:00'
