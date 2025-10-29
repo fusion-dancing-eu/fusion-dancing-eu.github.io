@@ -19,3 +19,16 @@ We dance not just for ourselves — but for the world we are building.
 ## How to participate?
 
 In case you would like to host a Dance for Justice event and have it listed above, or in case you want to contribute music as a DJ, fill out this form: https://forms.gle/guCy94g2Jkc774Mz9
+
+## Contributing DJs
+
+A selection of awesome DJs are joining the parties as well as in some cases contribute a set of songs to inspire you wherever you are. Among others, we have DJs
+Anaïs,
+Andrea,
+Dane ([Tidal](https://tidal.com/playlist/2dc0758d-6676-425d-be9d-e520318c6235)),
+Dragonchild ([Tidal](https://tidal.com/playlist/990142cb-7ef0-4fac-b44a-3d02025a9835)),
+Greta K,
+Nadine,
+Rolando ([Spotify](https://open.spotify.com/playlist/2pZ2LJwjpoXm9lLYeu67Nq)),
+Spacekitty, and
+Thierry	([Spotify](https://open.spotify.com/playlist/3MHsilHY6rYujzIOyW6lFF)).
