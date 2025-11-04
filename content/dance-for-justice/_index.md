@@ -14,7 +14,9 @@ We are not fighting any individual, but a system. Anyone can join as long as the
 
 We dance not just for ourselves — but for the world we are building.
 
-{{<localevents section="dance-for-justice" onboarding="false">}}
+{{<localevents section="dance-for-justice" onboarding="false" subscribe="false">}}
+
+*All dates and times are provided in the local timezone.*
 
 ## How to participate?
 
@@ -24,11 +26,14 @@ In case you would like to host a Dance for Justice event and have it listed abov
 
 A selection of awesome DJs are joining the parties as well as in some cases contribute a set of songs to inspire you wherever you are. Among others, we have DJs
 Anaïs,
-Andrea,
 Dane ([Tidal](https://tidal.com/playlist/2dc0758d-6676-425d-be9d-e520318c6235)),
 Dragonchild ([Tidal](https://tidal.com/playlist/990142cb-7ef0-4fac-b44a-3d02025a9835)),
-Greta K,
-Nadine,
+GiaSoul Andrea ([Spotify](https://open.spotify.com/playlist/5RhAxzwRvxe0efo9uEljwP)),
+Greta K ([Tidal](https://tidal.com/playlist/73df656b-c8a8-423f-83c1-2edde133362e
+)),
+Igor Tango ([Spotify](https://open.spotify.com/playlist/7d0u28ENsaKeVluZfsKUMW)),
+Nadine ([Spotify](https://open.spotify.com/playlist/7hRTEbd0sjUpqXa5ptTO
+)),
 Rolando ([Spotify](https://open.spotify.com/playlist/2pZ2LJwjpoXm9lLYeu67Nq)),
-Spacekitty, and
+Spacekitty ([Spotify](https://open.spotify.com/playlist/2gcKxI46IMDoMG0SnyO5l3)), and
 Thierry	([Spotify](https://open.spotify.com/playlist/3MHsilHY6rYujzIOyW6lFF)).

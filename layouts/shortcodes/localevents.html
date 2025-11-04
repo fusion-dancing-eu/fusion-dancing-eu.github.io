@@ -1,5 +1,6 @@
 {{- $section := .Get "section" -}}
 {{- $showOnboarding := lower (default "true" (.Get "onboarding")) -}}
+{{- $showSubscribe := lower (default "true" (.Get "subscribe")) -}}
 {{- $events := index $.Site.Data $section -}}
 {{- $yesterday := now.AddDate 0 0 -1 -}}
 {{- $upcomingEvents := where $events "start" "ge" ($yesterday.Format "2006-01-02T15:04:05Z07:00") -}}
@@ -26,11 +27,11 @@
             <td>
                 {{- $startTime := .start | time.Format "15:04" -}}
                 {{- $startDate := .start | time.Format "02" -}}
-                {{- $startMonth := .start | time.Format "January" -}}
+                {{- $startMonth := .start | time.Format "Jan" -}}
                 {{- $startYear := .start | time.Format "2006" -}}
                 {{- $endTime := .end | time.Format "15:04" -}}
                 {{- $endDate := .end | time.Format "02" -}}
-                {{- $endMonth := .end | time.Format "January" -}}
+                {{- $endMonth := .end | time.Format "Jan" -}}
                 {{- $endYear := .end | time.Format "2006" -}}
 
                 {{- if and (eq $startDate $endDate) (eq $startMonth $endMonth) -}}
@@ -50,6 +51,7 @@
 <p>There are currently no upcoming events available.</p>
 {{- end -}}
 
+{{- if eq $showSubscribe "true" -}}
 {{ $icsRelUrl := printf "%s/index.ics" $section }}
 {{- $webCalUrl := $icsRelUrl | absURL | replaceRE "^https?://" "webcal://" | safeURL }}
 <p>
@@ -59,6 +61,7 @@
     Another option to stay up to date is subscribing to the <a href="{{ .Page.Permalink }}index.xml">RSS feed</a> of
     newly added events.
 </p>
+{{- end -}}
 
 {{- if eq $showOnboarding "true" -}}
 <p>
