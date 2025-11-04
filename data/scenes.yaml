@@ -9,7 +9,7 @@
   lon: -2.5887
   lat: 51.451
 - name: Frankfurt am Main
-  url: /frankfurt
+  url: https://fusion-dancing.eu/frankfurt
   status: active
   lon: 8.6821
   lat: 50.1109
@@ -49,7 +49,7 @@
   lon: 7.4522
   lat: 46.9482
 - name: Heidelberg
-  url: /heidelberg
+  url: https://fusion-dancing.eu/heidelberg
   status: active
   lon: 8.6724
   lat: 49.3988
@@ -69,7 +69,7 @@
   lon: 12.360103
   lat: 51.340199
 - name: Darmstadt
-  url: /darmstadt
+  url: https://fusion-dancing.eu/darmstadt
   status: active
   lon: 8.6512
   lat: 49.8728
