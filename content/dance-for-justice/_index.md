@@ -25,7 +25,7 @@ In case you would like to host a Dance for Justice event and have it listed abov
 ## Contributing DJs
 
 A selection of awesome DJs are joining the parties as well as in some cases contribute a set of songs to inspire you wherever you are. Among others, we have DJs
-Anaïs ([Tidal](https://tidal.com/playlist/1f840a42-9fcc-4ce3-91c3-a2e41383e0f2)),
+Anaïs ([Tidal](https://tidal.com/playlist/1f840a42-9fcc-4ce3-91c3-a2e41383e0f2), [Spotify](https://open.spotify.com/playlist/7Cg9rByAtUVLAjaEr5eomM)),
 Dane ([Tidal](https://tidal.com/playlist/2dc0758d-6676-425d-be9d-e520318c6235)),
 Dragonchild ([Tidal](https://tidal.com/playlist/990142cb-7ef0-4fac-b44a-3d02025a9835)),
 GiaSoul Andrea ([Spotify](https://open.spotify.com/playlist/5RhAxzwRvxe0efo9uEljwP)),
