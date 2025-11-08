@@ -35,5 +35,6 @@ Igor Tango ([Spotify](https://open.spotify.com/playlist/7d0u28ENsaKeVluZfsKUMW))
 Nadine ([Spotify](https://open.spotify.com/playlist/7hRTEbd0sjUpqXa5ptTO
 )),
 Rolando ([Spotify](https://open.spotify.com/playlist/2pZ2LJwjpoXm9lLYeu67Nq)),
-Spacekitty ([Spotify](https://open.spotify.com/playlist/2gcKxI46IMDoMG0SnyO5l3)), and
-Thierry	([Spotify](https://open.spotify.com/playlist/3MHsilHY6rYujzIOyW6lFF)).
+Spacekitty ([Spotify](https://open.spotify.com/playlist/2gcKxI46IMDoMG0SnyO5l3)),
+Thierry	([Spotify](https://open.spotify.com/playlist/3MHsilHY6rYujzIOyW6lFF)), and
+Wohosheni ([Deezer](https://www.deezer.com/en/playlist/14513243523)).
