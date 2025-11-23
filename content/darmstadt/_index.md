@@ -12,6 +12,8 @@ You can also see all of their events in the [Rhein-Main-Neckar](/rhein-main-neck
 
 {{<localevents section="darmstadt">}}
 
+---
+
 ## Code of Conduct
 
 We invite you to dance and spend time with us. For this, we would like to share some aspects to help you figure out what to expect, and create a support structure for navigating our space together. We also want to share some of our ideas for the dances more explicitly.
