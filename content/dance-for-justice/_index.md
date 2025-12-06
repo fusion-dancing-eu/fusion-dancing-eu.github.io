@@ -14,17 +14,11 @@ We are not fighting any individual, but a system. Anyone can join as long as the
 
 We dance not just for ourselves — but for the world we are building.
 
-{{<localevents section="dance-for-justice" onboarding="false" subscribe="false">}}
+## 2025
 
-*All dates and times are provided in the local timezone.*
+In our first edition of Dance for Justice, we have hosted more than 20 community events across Europe, raising around 3000€ for organizations working to end sexual violence and support survivors.
 
-## How to participate?
-
-In case you would like to host a Dance for Justice event and have it listed above, or in case you want to contribute music as a DJ, fill out this form: https://forms.gle/guCy94g2Jkc774Mz9
-
-## Contributing DJs
-
-A selection of awesome DJs are joining the parties as well as in some cases contribute a set of songs to inspire you wherever you are. Among others, we have DJs
+A selection of awesome DJs joined the parties as well as in some cases contributed a set of songs to inspire everyone. Among others, these were DJs
 Anaïs ([Tidal](https://tidal.com/playlist/1f840a42-9fcc-4ce3-91c3-a2e41383e0f2), [Spotify](https://open.spotify.com/playlist/7Cg9rByAtUVLAjaEr5eomM)),
 Dane ([Tidal](https://tidal.com/playlist/2dc0758d-6676-425d-be9d-e520318c6235)),
 Dragonchild ([Tidal](https://tidal.com/playlist/990142cb-7ef0-4fac-b44a-3d02025a9835)),
