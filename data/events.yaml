@@ -355,9 +355,16 @@
   link: https://theresponse.dance/
   added: 2025-12-11
   discord_event_id: '1448618750226993223'
-- name: Berlin Blues & Fusion Experience 
+- name: Berlin Blues & Fusion Experience
   start: 2026-10-01
   end: 2026-10-04
   location: Berlin, Germany
   link: https://www.berlindancemode.com/
   added: 2025-12-11
+- name: '✨III Fusion Dance Immersion: Flouer and Dani'
+  start: '2026-03-06'
+  end: '2026-03-08'
+  location: Sant Mateu, Spain
+  link: https://forms.gle/hivUuQuHw4sGqHtg9
+  added: '2025-12-12'
+  discord_event_id: '1449031935954522234'
