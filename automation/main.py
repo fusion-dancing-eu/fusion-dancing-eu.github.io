@@ -28,6 +28,11 @@ SOURCES = [
         "Europe/Berlin",
         "https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/gviz/tq?tqx=out:csv&sheet=Stuttgart",
     ),
+    (
+        "strasbourg",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1pq_QsgINckZTTZ6_UcCICsPO7FxThBASU3qp1IfmZBg/gviz/tq?tqx=out:csv&sheet=Events",
+    ),
 ]
 
 GROUPS = {
