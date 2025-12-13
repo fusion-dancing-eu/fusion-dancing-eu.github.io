@@ -33,7 +33,9 @@ The Sheet link needs to be a read only link that is accessible without login. It
     - Example: https://awesome-fusion-social.berlin
 
 
-See the [Google Sheet for the Darmstadt socials](https://docs.google.com/spreadsheets/d/1xH5iBL0r9ex9bE934b-IPXQeCnpiV-oxsgWJVqLrzCY/edit?usp=sharing) as an example.
+See this [example Google Sheet](https://docs.google.com/spreadsheets/d/1NbRlVGk6hz8GkVE7xs9yf8UcxYkzTlphWSQYO5XKu0Y/edit?usp=sharing)
+or upload this [ODS template](https://fusion-dancing.eu/community-events-example.ods)
+to your Google Drive.
 
 Don't like Google? Sounds fair. You can instead provide a public link to any CSV file that follows the schema above.
 
