@@ -1,8 +1,16 @@
-- title: Example Event
-  start: '2025-05-17T15:00:00'
-  end: '2025-05-17T19:00:00'
-  location: Awesome Dance Studio
-  added: '2025-03-30'
-  link: https://example-website…
-  start_utc: '2025-05-17T13:00:00Z'
-  end_utc: '2025-05-17T17:00:00Z'
+- title: fusion sunday afternoon
+  start: '2026-02-15T13:00:00'
+  end: '2026-02-15T17:00:00'
+  location: la station,7 Rue des Écrivains, 67000 Strasbourg
+  added: '2026-01-22'
+  link: https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ffuseyourroots%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAb21jcAPffXhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAad77rdENWBkhu0wWpi8gm-Dq-XX4eFqME_steSRzG09mt4R-4pMKF1fZzcbLw_aem_yQ-lLOPLNpvl36s9f9LasA&e=AT3eLcOykglyCTrmxff5ACyV7c5Oa-a1tfFZPSyPp8hIzsJ_fzwx_RitjfrXFAUQoetcGYnWCiXW5gmHiyaqtfXXx7ma7sZYx4PkUSUWVDmEgbeFkLMMBy76Hg&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGne-63RDVgZIbtMFqYvIJvg6vl1-HhajBP7LXkkcxtPZreEfuKTChdX2c3Gy8_aem_yQ-lLOPLNpvl36s9f9LasA
+  start_utc: '2026-02-15T12:00:00Z'
+  end_utc: '2026-02-15T16:00:00Z'
+- title: fusion party
+  start: '2026-03-06T19:30:00'
+  end: '2026-03-07T01:00:00'
+  location: la station,7 Rue des Écrivains, 67000 Strasbourg
+  added: '2026-01-22'
+  link: https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Ffuseyourroots%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAb21jcAPffXhleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAad77rdENWBkhu0wWpi8gm-Dq-XX4eFqME_steSRzG09mt4R-4pMKF1fZzcbLw_aem_yQ-lLOPLNpvl36s9f9LasA&e=AT3eLcOykglyCTrmxff5ACyV7c5Oa-a1tfFZPSyPp8hIzsJ_fzwx_RitjfrXFAUQoetcGYnWCiXW5gmHiyaqtfXXx7ma7sZYx4PkUSUWVDmEgbeFkLMMBy76Hg&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGne-63RDVgZIbtMFqYvIJvg6vl1-HhajBP7LXkkcxtPZreEfuKTChdX2c3Gy8_aem_yQ-lLOPLNpvl36s9f9LasA
+  start_utc: '2026-03-06T18:30:00Z'
+  end_utc: '2026-03-07T00:00:00Z'
