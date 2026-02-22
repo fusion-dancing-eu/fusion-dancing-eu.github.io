@@ -1,11 +1,3 @@
-- title: fusion sunday afternoon
-  start: '2026-02-15T13:00:00'
-  end: '2026-02-15T17:00:00'
-  location: la station,7 Rue des Écrivains, 67000 Strasbourg
-  added: '2026-01-22'
-  link: https://linktr.ee/fuseyourroots
-  start_utc: '2026-02-15T12:00:00Z'
-  end_utc: '2026-02-15T16:00:00Z'
 - title: fusion party
   start: '2026-03-06T19:30:00'
   end: '2026-03-07T01:00:00'
@@ -14,11 +6,27 @@
   link: https://linktr.ee/fuseyourroots
   start_utc: '2026-03-06T18:30:00Z'
   end_utc: '2026-03-07T00:00:00Z'
+- title: fusion afternoon
+  start: '2026-04-26T13:00:00'
+  end: '2026-04-27T17:00:00'
+  location: la station,7 Rue des Écrivains, 67000 Strasbourg
+  added: '2026-01-22'
+  link: https://linktr.ee/fuseyourroots
+  start_utc: '2026-04-26T11:00:00Z'
+  end_utc: '2026-04-27T15:00:00Z'
+- title: fusion party
+  start: '2026-05-22T19:30:00'
+  end: '2026-05-23T01:00:00'
+  location: la station,7 Rue des Écrivains, 67000 Strasbourg
+  added: '2026-01-22'
+  link: https://linktr.ee/fuseyourroots
+  start_utc: '2026-05-22T17:30:00Z'
+  end_utc: '2026-05-22T23:00:00Z'
 - title: contango and fusion festival
   start: '2026-05-23T10:30:00'
-  end: '2026-05-25T18:00:00'
+  end: '2026-05-25T17:00:00'
   location: 'la maison du mouvement strasbourg '
   added: '2026-02-21'
   link: https://tangodyssee.com/festival-tensegrite/
   start_utc: '2026-05-23T08:30:00Z'
-  end_utc: '2026-05-25T16:00:00Z'
+  end_utc: '2026-05-25T15:00:00Z'
