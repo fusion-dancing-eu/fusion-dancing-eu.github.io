@@ -1,6 +1,6 @@
 {{- $past := .Get "past" -}}
 {{- range $year, $events := .Site.Data.events -}}
-{{- if ge (int $year) now.Year -}}
+{{- if or (eq $past "true") (ge (int $year) now.Year) -}}
 {{- $thresholdDate := now.AddDate 0 0 0 -}}
 {{- $selectedEvents := slice -}}
 {{- if eq $past "true" -}}
