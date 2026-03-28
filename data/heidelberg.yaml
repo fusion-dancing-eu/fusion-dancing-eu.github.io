@@ -99,3 +99,11 @@
   link: ''
   start_utc: '2026-03-14T18:00:00Z'
   end_utc: '2026-03-14T21:00:00Z'
+- title: Workshop & Social
+  start: '2026-04-18T19:00:00'
+  end: '2026-04-18T23:00:00'
+  location: Swing Step Heidelberg (new adress!)
+  added: '2026-03-28'
+  link: ''
+  start_utc: '2026-04-18T17:00:00Z'
+  end_utc: '2026-04-18T21:00:00Z'
