@@ -26,5 +26,4 @@ hugo server
 
 ## TODO
 
-- [ ] add support for `cancelled: true` in `events.yaml` to render the events with strike through (css class already exists, rss template doesn't know how to handle this yet)
 - [ ] add translations of the main text and a language switcher

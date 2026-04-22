@@ -20,7 +20,7 @@
     </thead>
     <tbody>
         {{- range sort $selectedEvents "start" -}}
-        <tr>
+        <tr{{- if .cancelled }} class="cancelled" {{- end }}>
             <td>
                 {{- $startDate := .start | time.Format "02" -}}
                 {{- $startMonth := .start | time.Format "Jan" -}}
@@ -41,8 +41,8 @@
                 {{ .name }}
                 {{- end -}}
             </td>
-        </tr>
-        {{- end -}}
+            </tr>
+            {{- end -}}
     </tbody>
 </table>
 {{- end -}}
