@@ -5,7 +5,9 @@ VERSION:2.0
 PRODID:-//fusion-dancing-eu/{{ $section }}//NONSGML v1.0//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-{{- range $event := where $data "cancelled" "!=" true }}
+{{- if $data -}}
+{{- range $event := $data }}
+{{- if not .cancelled }}
 BEGIN:VEVENT
 UID:{{ .title | urlize }}-{{ .start_utc | dateFormat "20060102" }}-{{ $section }}@fusion-dancing.eu
 SUMMARY:{{ replace .title "," "\\," }}
@@ -20,5 +22,7 @@ More info: {{ .link }}
 {{- end }}
 DTSTAMP:{{ .added | time.Format "20060102T150405Z" }}
 END:VEVENT
+{{- end }}
+{{- end }}
 {{- end }}
 END:VCALENDAR

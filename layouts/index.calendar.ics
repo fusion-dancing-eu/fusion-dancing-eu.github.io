@@ -5,6 +5,7 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 {{- range $year, $events := .Site.Data.events }}
 {{- range $events }}
+{{- if not .cancelled }}
 BEGIN:VEVENT
 UID:{{ .name | urlize }}-{{ .start | dateFormat "20060102" }}@fusion-dancing.eu
 SUMMARY:{{ replace .name "," "\\," }}
@@ -16,6 +17,7 @@ URL:{{ .link }}
 DESCRIPTION:Join us at {{ replace .name "," "\\," }} in {{ replace .location "," "\\," }}! More info: {{ .link }}
 DTSTAMP:{{ .added | time.Format "20060102T150405Z" }}
 END:VEVENT
+{{- end }}
 {{- end }}
 {{- end }}
 END:VCALENDAR
