@@ -402,6 +402,7 @@
   location: Pyrenees, France
   link: https://festival-tom.fr/
   added: '2026-01-25'
+  discord_event_id: '1501304976058618047'
 - name: Tiny Black Forest
   start: '2026-04-10'
   end: '2026-04-12'
@@ -435,10 +436,4 @@
   location: Erlangen, Germany
   link: https://www.thatswing.de/en/event/frankonian-blues-fusion-exchange-2026-2/
   added: '2026-05-03'
-- name: Summer TOM
-  start: '2026-08-01'
-  end: '2026-08-08'
-  location: Pyrénées, France
-  link: https://festival-tom.fr/
-  added: '2026-05-08'
-  discord_event_id: '1501304976058618047'
+
