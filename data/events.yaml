@@ -436,4 +436,10 @@
   location: Erlangen, Germany
   link: https://www.thatswing.de/en/event/frankonian-blues-fusion-exchange-2026-2/
   added: '2026-05-03'
-
+  discord_event_id: '1503409532229914765'
+- name: The Fusion Nest
+  start: '2026-09-11'
+  end: '2026-09-14'
+  location: Busca, Italy
+  link: https://motleyhue.org/nest/
+  added: '2026-05-11'
