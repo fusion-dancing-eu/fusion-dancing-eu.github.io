@@ -443,3 +443,11 @@
   location: Busca, Italy
   link: https://motleyhue.org/nest/
   added: '2026-05-11'
+2027:
+- name: Bruges Fusion & Micro weekend
+  start: '2027-01-29'
+  end: '2027-02-02'
+  location: Bruges, Belgium
+  link: https://www.toulousefusion.fr/bruges-fusion-weekend
+  added: '2026-05-16'
+  discord_event_id: '1505127773352624198'
