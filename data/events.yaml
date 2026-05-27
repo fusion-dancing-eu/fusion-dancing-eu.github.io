@@ -443,6 +443,13 @@
   location: Busca, Italy
   link: https://motleyhue.org/nest/
   added: '2026-05-11'
+- name: Microscope
+  start: '2026-10-02'
+  end: '2026-10-04'
+  location: Bristol, UK
+  link: https://kaleidoscopefusion.com/microscope
+  added: '2026-05-27'
+  discord_event_id: '1488583467414589501'
 2027:
 - name: Bruges Fusion & Micro weekend
   start: '2027-01-29'
