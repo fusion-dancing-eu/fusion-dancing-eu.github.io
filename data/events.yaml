@@ -450,6 +450,12 @@
   link: https://kaleidoscopefusion.com/microscope
   added: '2026-05-27'
   discord_event_id: '1488583467414589501'
+- name: Highland Fusion Retreat
+  start: '2026-10-16'
+  end: '2026-10-19'
+  location: Lochearnhead Scout Station, UK
+  link: https://www.scottishfusionretreats.org/events/HFR26
+  added: '2026-06-09'
 2027:
 - name: Bruges Fusion & Micro weekend
   start: '2027-01-29'
