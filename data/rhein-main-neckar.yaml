@@ -63,9 +63,9 @@
     Darmstadt cooperation'
   start: '2026-07-05T16:00:00'
   end: '2026-07-05T20:00:00'
-  location: TU Darmstadt, S1|03, Hochschulstraße 1
+  location: Outdoor in Orangeriegarten Darmstadt, Bessunger Str. 44
   added: '2026-06-07'
-  link: https://www.sight-board.de/tu-darmstadt/?object=B58DDB0D-813B-A4D1-9AB4-8A0DE6B3E98C#
+  link: https://karte.openstreetmap.de/#map=16.94/49.857011/8.653444
   start_utc: '2026-07-05T14:00:00Z'
   end_utc: '2026-07-05T18:00:00Z'
 - title: Special Workshop mit Sonja (Freiburg)
@@ -302,9 +302,9 @@
     3h | FRiDA = Frankfurt and Darmstadt cooperation'
   start: '2026-07-05T16:00:00'
   end: '2026-07-05T20:00:00'
-  location: TU Darmstadt, S1|03, Hochschulstraße 1
+  location: Outdoor in Orangeriegarten Darmstadt, Bessunger Str. 44
   added: '2026-06-21'
-  link: https://www.sight-board.de/tu-darmstadt/?object=B58DDB0D-813B-A4D1-9AB4-8A0DE6B3E98C#
+  link: https://karte.openstreetmap.de/#map=16.94/49.857011/8.653444
   start_utc: '2026-07-05T14:00:00Z'
   end_utc: '2026-07-05T18:00:00Z'
 - title: Workshop & Social
