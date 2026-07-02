@@ -464,6 +464,13 @@
   link: https://www.toulousefusion.fr/bruges-fusion-weekend
   added: '2026-05-16'
   discord_event_id: '1505127773352624198'
+- name: Playground Utrecht Fusion
+  start: '2027-02-05'
+  end: '2027-02-07'
+  location: Utrecht, the Netherlands
+  link: https://playgroundfusion.nl
+  added: '2026-07-02'
+  discord_event_id: '1522324661101265108'
 - name: Camp Kaleidoscope
   start: '2027-03-21'
   end: '2027-03-26'
