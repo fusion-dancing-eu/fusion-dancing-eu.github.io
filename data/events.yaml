@@ -456,6 +456,13 @@
   location: Lochearnhead Scout Station, UK
   link: https://www.scottishfusionretreats.org/events/HFR26
   added: '2026-06-09'
+- name: Dark Fusion
+  start: '2026-11-06'
+  end: '2026-11-09'
+  location: Krakow, Poland
+  link: https://forms.gle/ReKELSW1VqwQBbtWA
+  added: '2026-07-06'
+  discord_event_id: '1523454413338054876'
 2027:
 - name: Bruges Fusion & Micro weekend
   start: '2027-01-29'
