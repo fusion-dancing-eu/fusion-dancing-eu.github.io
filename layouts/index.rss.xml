@@ -9,6 +9,7 @@
 
     {{ range $year, $events := .Site.Data.events }}
     {{ range $events }}
+    {{ if .added }}
     <item>
         <title>{{ .name }}</title>
         <link>{{ .link }}</link>
@@ -19,6 +20,7 @@
             More info: {{ .link }}
         </description>
     </item>
+    {{ end }}
     {{ end }}
     {{ end }}
 
