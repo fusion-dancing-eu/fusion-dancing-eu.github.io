@@ -33,6 +33,11 @@ SOURCES = [
         "Europe/Berlin",
         "https://docs.google.com/spreadsheets/d/1pq_QsgINckZTTZ6_UcCICsPO7FxThBASU3qp1IfmZBg/gviz/tq?tqx=out:csv&sheet=Events",
     ),
+    (
+        "dance-for-justice",
+        "Europe/Berlin",
+        "https://docs.google.com/spreadsheets/d/1ykb0g5aIaNzc2AfmMOsF3Tm7G5UChOeXM85E_Di7GmA/gviz/tq?tqx=out:csv&sheet=2026%20Event%20List",
+    ),
 ]
 
 GROUPS = {

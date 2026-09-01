@@ -14,6 +14,19 @@ We are not fighting any individual, but a system. Anyone can join as long as the
 
 We dance not just for ourselves — but for the world we are building.
 
+## 2026
+
+We are rallying communities from around Europe and the world to join again this year.
+As more and more communities announce their local Dance for Justice events, they will show up below.
+
+{{<localevents section="dance-for-justice" onboarding="false" subscribe="false">}}
+
+*All dates and times are provided in the local timezone.*
+
+### How to participate?
+
+In case you would like to host a Dance for Justice event and have it listed above, or in case you want to contribute music as a DJ, fill out this form: https://forms.gle/guCy94g2Jkc774Mz9
+
 ## 2025
 
 In our first edition of Dance for Justice, we have hosted more than 20 community events across Europe, raising more than 4000€ for organizations working to end sexual violence and support survivors.
