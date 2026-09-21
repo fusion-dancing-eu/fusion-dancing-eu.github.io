@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dance for Justice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --pink: #eb8f99;
+      --pink-l: #f5b8bf;
+      --yellow: #FFD94A;
+      --white: #FFFFFF;
+      --dark: #1A0812;
+      --muted: rgba(255, 255, 255, 0.9);
+      --line: rgba(235, 143, 153, 0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.0625rem;
+      background: var(--dark);
+      color: var(--white);
+      line-height: 1.8;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    #content a {
+      color: var(--yellow);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--pink-l);
+    }
+
+    #organizations a {
+      color: #fff;
+      text-underline-offset: 3px;
+    }
+
+    #organizations a:hover {
+      color: var(--yellow);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(26, 8, 18, 0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      color: var(--white);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 9vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.03em;
+      font-weight: 400;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--pink);
+    }
+
+    .hero-date {
+      margin-top: 1.5rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+    }
+
+    .hero-tagline {
+      margin-top: 0.5rem;
+      max-width: 460px;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+
+    .hero-cta {
+      margin-top: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 2px;
+      background: var(--pink);
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+
+    #content a.btn {
+      color: var(--dark);
+    }
+
+    #content a.btn:hover {
+      color: var(--dark);
+    }
+
+    .hero-image {
+      width: 260px;
+      border-radius: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    #content {
+      background: var(--dark);
+      box-shadow: none;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 1.75rem;
+    }
+
+    .section-title em {
+      color: var(--pink);
+      font-style: normal;
+    }
+
+    /* ── ABOUT ── */
+    #about p {
+      color: var(--muted);
+      margin-bottom: 1.3rem;
+      max-width: 680px;
+    }
+
+    #about p.lead {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    #about p.closing {
+      color: var(--pink-l);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    #about strong {
+      color: var(--white);
+    }
+
+    .impact {
+      margin: 2rem 0;
+      padding-left: 1.25rem;
+      border-left: 3px solid var(--yellow);
+      max-width: 680px;
+    }
+
+    .impact p {
+      color: var(--white);
+      margin: 0 0 0.75rem;
+    }
+
+    .impact p:last-child {
+      margin: 0;
+    }
+
+    .impact strong {
+      color: var(--yellow);
+    }
+
+    /* ── PARTICIPATE ── */
+    #participate th {
+      background-color: var(--dark);
+    }
+
+    #events-list h3 {
+      margin-top: 0;
+    }
+
+    .role {
+      margin-bottom: 3rem;
+    }
+
+    .role:last-child {
+      margin-bottom: 0;
+    }
+
+    .role h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+
+    .role ol,
+    .role ul {
+      padding-left: 1.4rem;
+      max-width: 680px;
+    }
+
+    .role li {
+      margin-bottom: 0.8rem;
+      color: var(--muted);
+    }
+
+    .role li strong {
+      color: var(--white);
+    }
+
+    .role-text {
+      max-width: 680px;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .events-placeholder {
+      max-width: 680px;
+      padding: 1.5rem;
+      border: 1px dashed var(--line);
+      border-radius: 6px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .sub-list {
+      margin-top: 0.4rem;
+      list-style: disc;
+      font-size: 1rem;
+    }
+
+    .sub-list li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── ORGANIZATIONS ── */
+    .org-list {
+      list-style: none;
+      max-width: 680px;
+    }
+
+    .org-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .org-list li:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .org-list a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .org-list a:hover {
+      color: var(--yellow);
+    }
+
+    .org-list a::after {
+      content: ' →';
+      color: var(--pink);
+    }
+
+    .org-note {
+      margin-top: 1.25rem;
+      font-size: 1rem;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    footer .footer-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem 1.25rem;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero-image {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-logo {
+        display: none;
+      }
+
+      section {
+        padding: 3.5rem 1.25rem;
+      }
+
+      #hero {
+        padding: 6rem 1.25rem 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo">Dance for Justice</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#participate">Participate</a></li>
+      <li><a href="#organizations">Organizations</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" style="border-top:none;">
+    <div class="container hero-inner">
+      <div>
+        <h1>Dance for<span>Justice</span></h1>
+        <p class="hero-date">November 25, 2025</p>
+        <p class="hero-tagline">An international fusion dance movement — fundraising for organizations that protect
+          women worldwide.</p>
+        <div class="hero-cta">
+          <a href="#participate" class="btn">Get Involved</a>
+        </div>
+      </div>
+      <img src="/img/dance_for_justice_2026.png" alt="Dance for Justice 2026 poster" class="hero-image" />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">More than a dance — a <em>statement</em></h2>
+      <p class="lead">Our house parties are more than just a celebration of movement — they are a statement for safety
+        and inclusion. Through the vibrant, inclusive energy of fusion dance, we create space where bodies are
+        celebrated, boundaries are respected, and community thrives in safety and solidarity.</p>
+      <p>We dance in protest of rape culture — a culture that normalizes violence, silences survivors, and devalues
+        consent. We reject the myths, the silence, and the systems that perpetuate sexual harm. In their place, we move
+        with intention, with joy, and with fierce compassion.</p>
+
+      <div class="impact">
+        <p>All proceeds go directly to organizations working to end sexual violence and support survivors.</p>
+        <p>In our first edition in 2025, we hosted more than <strong>20 community events</strong> across Europe, raising
+          more than <strong>4&nbsp;000&nbsp;€</strong>.</p>
+      </div>
+
+      <p>Together, we embody a future where consent is culture, accountability is the norm, and everyone has the right
+        to move freely without fear.</p>
+      <p>We are not fighting any individual, but a system. <strong>Anyone can join as long as they share those
+          values.</strong></p>
+      <p class="closing">We dance not just for ourselves — but for the world we are building.</p>
+    </div>
+  </section>
+
+  <!-- HOW TO PARTICIPATE -->
+  <section id="participate">
+    <div class="container">
+      <h2 class="section-title">How to <em>participate</em></h2>
+
+      <div class="role">
+        <h3>As a participant</h3>
+        <p class="role-text">Join one of your local party, and give time, money, or goods to fight sexual violence.</p>
+        <div class="events-placeholder" id="events-list">
+          {{<localevents section="dance-for-justice" onboarding="false" subscribe="false">}}
+        </div>
+      </div>
+
+      <div class="role">
+        <h3>As an Organizer</h3>
+        <ol>
+          <li><strong>Host an event</strong> — a house party or a regular dance gathering in November, around the 25th
+            (International Day for the Elimination of Violence Against Women).</li>
+          <li><strong>Get listed</strong> — add your event to <a
+              href="https://docs.google.com/spreadsheets/d/1ykb0g5aIaNzc2AfmMOsF3Tm7G5UChOeXM85E_Di7GmA/edit?usp=sharing"
+              target="_blank" rel="noopener">the official spreadsheet</a>.</li>
+          <li><strong>Get the playlist</strong> — a curated playlist is provided in collaboration with fusion DJs.</li>
+          <li><strong>Create your flyer</strong> — use <a href="https://canva.link/1nx8qk39bxow0zp" target="_blank"
+              rel="noopener">our Canva template</a>.</li>
+          <li><strong>Join the main date</strong> — if you're partying on November 25th, join the European Fusion
+            Discord to see other parties streaming live.</li>
+          <li>
+            <strong>Run a little fundraiser</strong> — choose an organization fighting sexual violence (we recommend a
+            local one; see <a href="#organizations">below</a>) and raise funds by:
+            <ul class="sub-list">
+              <li>Having a donation box at the door</li>
+              <li>Selling tickets to the party or to a class</li>
+              <li>Selling art, drinks, or food</li>
+              <li>Holding an auction</li>
+            </ul>
+          </li>
+          <li><strong>Share the impact</strong> — donate the proceeds and announce your fundraising effort on social
+            media. Have fun!</li>
+        </ol>
+      </div>
+
+      <div class="role">
+        <h3>As a DJ</h3>
+        <ul>
+          <li>Offer a Spotify playlist through <a
+              href="https://docs.google.com/spreadsheets/d/1ykb0g5aIaNzc2AfmMOsF3Tm7G5UChOeXM85E_Di7GmA" target="_blank"
+              rel="noopener">the DJ contribution form</a>.</li>
+          <li>Your playlist will be considered for the official collection shared with all organizers worldwide.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>As a Teacher</h3>
+        <ul>
+          <li>Offer a class to your local organizer that can be used as a fundraiser — entry fees go directly to the
+            chosen charity.</li>
+          <li>It can be part of the event evening or a standalone session before the main date.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDED ORGANIZATIONS -->
+  <section id="organizations">
+    <div class="container">
+      <h2 class="section-title">Recommended <em>organizations</em></h2>
+      <ul class="org-list">
+        <li><a href="https://www.rainn.org" target="_blank" rel="noopener">RAINN — The nation's largest anti-sexual
+            violence organization</a></li>
+        <li><a href="https://www.planning-familial.org" target="_blank" rel="noopener">Libre de ses choix | Le planning
+            familial</a></li>
+        <li><a href="https://righttobe.org" target="_blank" rel="noopener">Right To Be</a></li>
+        <li><a href="https://nomeansnoworldwide.org" target="_blank" rel="noopener">No Means No Worldwide</a></li>
+      </ul>
+      <p class="org-note">We encourage you to also support your local organization.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Dance for Justice</div>
+    <p>International Fusion Dance Fundraiser &mdash; November 25, 2025</p>
+  </footer>
+
+</body>
+
+</html>
