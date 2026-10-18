@@ -1,0 +1,30 @@
+- name: Fusionizers
+  start: 2020-12-31
+  end: 2021-01-03
+  location: Bern, Switzerland
+  link: https://www.fusionizers.com
+  cancelled: true
+- name: Kraków Fusion Fest
+  start: 2021-07-09
+  end: 2021-07-11
+  location: Krakow, Poland
+  link: https://www.facebook.com/events/482002226580392/
+- name: Toulouse Fusion Weekend
+  start: 2021-07-16
+  end: 2021-07-19
+  location: Toulouse, France
+  link: https://www.facebook.com/events/667858923617624/
+- name: BRUGES Fusion Weekend (BFW 2021)
+  start: 2021-08-27
+  end: 2021-08-29
+  location: Brugge, Belgium
+  link: https://www.toulousefusion.fr/bruges-fusion-weekend-intro
+- name: Open Blues 2021
+  start: 2021-09-02
+  end: 2021-09-05
+  location: Piotrowice Nyskie, Poland
+  link: https://www.openblues.pl/
+- name: Sync-In No.1 with J'EM
+  start: 2021-09-11
+  end: 2021-09-12
+  location: Berlin, Germany

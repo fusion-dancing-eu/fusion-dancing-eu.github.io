@@ -1,0 +1,74 @@
+- name: Fusionizers
+  start: 2020-01-03
+  end: 2020-01-05
+  location: Bern, Switzerland
+  link: https://www.fusionizers.com
+- name: Ice Bear Exchange
+  start: 2020-01-10
+  end: 2020-01-12
+  location: Berlin, Germany
+  link: http://ice.bearblues.berlin
+- name: Black Forest Fusion Winter Edition
+  start: 2020-02-21
+  end: 2020-02-24
+  location: Simonswald, Germany
+  link: https://www.facebook.com/events/525491401519835/
+- name: Double Shot Festival
+  start: 2020-02-27
+  end: 2020-03-01
+  location: Valencia, Spain
+  link: https://doubleshotfestival.com/
+- name: Cocoa Blues & Fusion Exchange
+  start: 2020-03-12
+  end: 2020-03-15
+  location: Barcelona, Spain
+  link: https://www.cocoablux.com/
+  cancelled: true
+- name: MokumFusion Mystery 2020
+  start: 2020-04-09
+  end: 2020-04-13
+  location: Amsterdam, Netherlands
+  link: https://www.facebook.com/events/2476162922656502
+  cancelled: true
+- name: IRN Blues 2020
+  start: 2020-05-01
+  end: 2020-05-04
+  location: Glasgow, UK
+  link: https://www.facebook.com/events/711125179303363/
+  cancelled: true
+- name: Manchester Micro Fusion Exchange
+  start: 2020-06-12
+  end: 2020-06-14
+  location: Manchester, UK
+  link: https://www.facebook.com/events/806336966480676
+  cancelled: true
+- name: Toulouse Fusion Weekend
+  start: 2020-07-17
+  end: 2020-07-20
+  location: Toulouse, France
+  link: https://www.facebook.com/events/667858923617624/
+  cancelled: true
+- name: Black Forest Fusion Summer Edition
+  start: 2020-08-21
+  end: 2020-08-28
+  location: Simonswald, Germany
+  link: https://www.blackforestfusion.com/
+  cancelled: true
+- name: Severn Sinners | Fusion & Blues
+  start: 2020-09-11
+  end: 2020-09-13
+  location: Bristol, UK
+  link: http://www.severnsinners.com/
+  cancelled: true
+- name: 'Glasgow Fusion Fest: Halloween Special'
+  start: 2020-10-30
+  end: 2020-11-02
+  location: Glasgow, UK
+  link: https://www.facebook.com/events/119925912626341/
+  cancelled: true
+- name: Cider House Blues 7
+  start: 2020-12-06
+  end: 2020-12-09
+  location: Bristol, UK
+  link: https://www.facebook.com/events/885581538485954/
+  cancelled: true

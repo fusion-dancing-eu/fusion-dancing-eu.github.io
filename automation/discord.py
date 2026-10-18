@@ -2,13 +2,14 @@ from copy import deepcopy
 from dataclasses import dataclass
 import os
 from pathlib import Path
-from typing import Optional, Dict, Any
+from typing import Iterable, Optional, Dict, Any
 from datetime import datetime, timezone
 import requests
 import re
 import yaml
 
 HERE = Path(__file__).parent
+EVENTS_DATA_DIR = HERE.parent / "data" / "events"
 
 
 def slugify(text: str) -> str:
@@ -224,11 +225,25 @@ def remove_year_in_name(event: ScheduledEvent) -> ScheduledEvent:
     return event
 
 
+def load_events(events_dir: Path) -> dict[int, list]:
+    """Load the events of every year from the one YAML file per year."""
+    return {
+        int(path.stem): yaml.safe_load(path.read_text(encoding="utf-8")) or []
+        for path in sorted(events_dir.glob("*.yaml"))
+        if path.stem.isdigit()
+    }
+
+
+def write_events(events_dir: Path, events: dict[int, list], years: Iterable[int]):
+    """Write back only the given years, leaving the other year files untouched."""
+    for year in years:
+        with open(events_dir / f"{year}.yaml", "w", encoding="utf-8") as f:
+            yaml.dump(events[year], f, sort_keys=False, allow_unicode=True)
+
+
 def main():
     # Load existing events
-    events_data_path = HERE.parent / "data" / "events.yaml"
-    with open(events_data_path, "r", encoding="utf-8") as f:
-        existing_events = yaml.safe_load(f) or {}
+    existing_events = load_events(EVENTS_DATA_DIR)
 
     # Fetch, filter and process events from Discord
     discord_events = [remove_year_in_name(e) for e in fetch_from_discord()]
@@ -244,9 +259,9 @@ def main():
     # Add relevant events from Discord
     updated_events = add_events(existing_events, discord_events)
 
-    # Write updated events back to yaml
-    with open(events_data_path, "w", encoding="utf-8") as f:
-        yaml.dump(updated_events, f, sort_keys=False, allow_unicode=True)
+    # Write back only the years that gained an event
+    changed_years = {e.scheduled_start_time.year for e in discord_events}
+    write_events(EVENTS_DATA_DIR, updated_events, changed_years)
 
     print("-".join([slugify(e.name) for e in discord_events]), end=None)
 

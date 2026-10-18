@@ -1,6 +1,12 @@
 from datetime import datetime
 
-from discord import matches_existing_event, is_relevant_discord_event, ScheduledEvent
+from discord import (
+    ScheduledEvent,
+    is_relevant_discord_event,
+    load_events,
+    matches_existing_event,
+    write_events,
+)
 
 RELEVANT_SCHEDULED_EVENT_KWARGS = dict(
     id="1",
@@ -103,3 +109,37 @@ def test_add_events():
         ),
         existing,
     ), "It happened in 2020 but not yet in 3030"
+
+
+def test_load_and_write_events(tmp_path):
+    (tmp_path / "2020.yaml").write_text(
+        "- name: UnicornDance\n  start: 2020-01-01\n", encoding="utf-8"
+    )
+    (tmp_path / "3030.yaml").write_text(
+        "- name: BearDance\n  start: 3030-01-01\n", encoding="utf-8"
+    )
+    # Must be ignored, only year files hold events
+    (tmp_path / "scenes.yaml").write_text("- name: Somewhere\n", encoding="utf-8")
+
+    events = load_events(tmp_path)
+
+    assert set(events) == {2020, 3030}, "Years are read from the file names as ints"
+    assert events[2020][0]["name"] == "UnicornDance"
+
+    untouched_before = (tmp_path / "2020.yaml").read_text(encoding="utf-8")
+    events[3030].append({"name": "NewDance"})
+    write_events(tmp_path, events, [3030])
+
+    assert (tmp_path / "2020.yaml").read_text(
+        encoding="utf-8"
+    ) == untouched_before, "Unchanged years stay untouched"
+    assert [e["name"] for e in load_events(tmp_path)[3030]] == [
+        "BearDance",
+        "NewDance",
+    ], "The changed year was written back"
+
+
+def test_write_events_creates_missing_year(tmp_path):
+    write_events(tmp_path, {2031: [{"name": "NewDance"}]}, [2031])
+
+    assert load_events(tmp_path) == {2031: [{"name": "NewDance"}]}
