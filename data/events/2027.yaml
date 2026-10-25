@@ -44,3 +44,17 @@
   location: Toulouse, France
   link: https://www.toulouse-neotango.eu/summary-fusion-with-tango-vibes
   added: 2026-07-08
+- name: 'Belta: Blues and fusion dance weekender'
+  start: '2027-03-12'
+  end: '2027-03-14'
+  location: Newcastle upon Tyne, UK
+  link: https://www.hoodooblues.dance/belta-weekender
+  added: '2026-10-25'
+  discord_event_id: '1563899332757954590'
+- name: 'Belta: Blues and fusion dance weekend'
+  start: '2027-09-17'
+  end: '2027-09-19'
+  location: Newcastle upon Tyne, UK
+  link: https://www.hoodooblues.dance/belta-weekender
+  added: '2026-10-25'
+  discord_event_id: '1563899969981780058'
