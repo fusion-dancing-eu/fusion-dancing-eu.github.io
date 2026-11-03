@@ -5,10 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dance for Justice</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"
-    rel="stylesheet" />
   <style>
     *,
     *::before,
@@ -33,7 +29,7 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: sans-serif;
       font-size: 1.0625rem;
       background: var(--dark);
       color: var(--white);
@@ -121,8 +117,12 @@
       align-items: center;
     }
 
+    .hero-inner h1 {
+      font-size: clamp(2rem, 4vw, 4rem);
+    }
+
     h1 {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: sans-serif;
       font-size: clamp(3.5rem, 9vw, 6.5rem);
       line-height: 0.95;
       letter-spacing: 0.03em;
@@ -306,6 +306,10 @@
       font-size: 1rem;
     }
 
+    .fusion-calendar tr:nth-child(2n) {
+      background: none;
+    }
+
     .sub-list {
       margin-top: 0.4rem;
       list-style: disc;
@@ -418,7 +422,7 @@
   <section id="hero" style="border-top:none;">
     <div class="container hero-inner">
       <div>
-        <h1>Dance for<span>Justice</span></h1>
+        <h1>DANCE FOR <span>JUSTICE</span></h1>
         <p class="hero-date">November 25, 2026</p>
         <p class="hero-tagline">An international fusion dance movement — fundraising for organizations that protect
           women worldwide.</p>
